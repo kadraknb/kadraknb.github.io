@@ -1,0 +1,42 @@
+
+    body{
+        background-color: rgb(59, 59, 59);
+        margin: 2%;
+    }
+    h1{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+    #df{
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    ul li {
+        font-size: 20px;
+    }
+    #foto {
+        float: left;
+        position: relative;
+        padding: 5px;
+        background-color: orange;
+        
+       
+    }
+    #divfoto{
+         height: 300px;
+    }
+    div p{
+        font-family:  Arial;
+        position: absolute;
+        font-size: 2em;
+        left: 350px;
+        top: 130px;
+        right: 15%;
+    }
+    ul li:nth-child(odd) {
+        background-color: orange;
+        width:fit-content;
+    }
+    #try {
+       color: green;
+    }
