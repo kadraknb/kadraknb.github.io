@@ -8,7 +8,7 @@
 
     }
     #df{
-        font-size: 30px;
+        font-size: 15px;
         font-family: sans-serif;
     }
     ul li {
@@ -23,7 +23,7 @@
        
     }
     #divfoto{
-         height: 300px;
+         height: 266px;
     }
     div p{
         font-family:  Arial;
@@ -39,4 +39,11 @@
     }
     #try {
        color: green;
+    }
+    h3{
+        text-decoration: underline;
+        font-size: 20px;
+    }
+    #uldiv{
+        
     }
