@@ -9,7 +9,6 @@ import Context from './context/Context'
 
 function App () {
   const { previewProject } = useContext(Context)
-  console.log(Boolean(previewProject))
   return (
     <>
       <Profile />

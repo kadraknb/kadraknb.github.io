@@ -25,19 +25,20 @@ const projectList = [
     projectGroup: false,
     infGroup: [''],
     repository: 'ajust',
-    description: 'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
+    description:
+      'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
   },
   {
-    id: 'PixelsArt',
-    name: 'Project pixels art',
+    id: 'ShoppingCart',
+    name: 'Shopping cart',
     icon: iconDOM,
     gif: gifDOM,
-    tecFocus: 'DOM',
-    listTec: ['html', 'js', 'DOM'],
+    tecFocus: 'JSON',
+    listTec: ['html', 'js', 'DOM', 'JSON'],
     projectGroup: false,
     infGroup: [''],
     repository: 'ajust',
-    description: 'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
+    description: 'Página web de E-commerce, projeto focado na utilização de API.'
   }
 ]
 

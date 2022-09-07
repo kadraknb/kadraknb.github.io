@@ -4,12 +4,9 @@ import './pixels-art.css'
 function PixelsArt () {
   useEffect(() => {
     const script = require('./script').default
-    // console.log(script());
     script()
   }, [])
-  // const script = require('./script').default
-  //   console.log(script());
-  // script()
+
   return (
     <div id='body'>
       <h1 className="centerFlex" id="title">Paleta de Cores</h1>
