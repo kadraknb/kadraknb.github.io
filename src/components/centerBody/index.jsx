@@ -3,7 +3,7 @@ import React from 'react'
 function Centerbory () {
   return (
     <>
-      <h1>Ola, estou iniciando na programação pelo curso</h1>
+      <h1>info info info info info info info </h1>
     </>
   )
 }

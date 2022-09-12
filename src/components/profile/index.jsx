@@ -10,9 +10,9 @@ function Profile () {
       <img src={photoProfile} alt="photoProfile" width="200" height="200" />
       <div>
         <p>
-          Ola, estou iniciando na programação pelo curso da <span>TRYBE</span>
+          Ola, estou iniciando na programação pelo curso da <span>TRYBE.....</span>
         </p>
-        <p>Cidade/estado onde mora: Brasilia</p>
+        <p>.....................</p>
       </div>
       <ul>{technologyList.map((technology) => (
         <li key={technology.name}>
