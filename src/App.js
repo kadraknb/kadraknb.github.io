@@ -8,12 +8,15 @@ import ProjectList from './components/projectList'
 import Context from './context/Context'
 
 function App () {
+  const styleLi = {
+    backgroundColor: 'rgb(200, 0, 0)'
+  }
   const { previewProject } = useContext(Context)
   // console.log(previewProject)
   return (
     <>
       <Profile />
-      { previewProject ? <PreviewProject id={previewProject} /> : <Centerbory />}
+      { previewProject ? <PreviewProject id={previewProject} styleLi={styleLi} /> : <Centerbory />}
       <ProjectList />
     </>
   )
