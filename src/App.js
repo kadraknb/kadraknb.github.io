@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
 import Centerbory from './components/centerBody'
@@ -8,16 +9,22 @@ import ProjectList from './components/projectList'
 import Context from './context/Context'
 
 function App () {
-  const styleLi = {
-    backgroundColor: 'rgb(200, 0, 0)'
-  }
   const { previewProject } = useContext(Context)
-  // console.log(previewProject)
   return (
     <>
-      <Profile />
-      { previewProject ? <PreviewProject id={previewProject} styleLi={styleLi} /> : <Centerbory />}
-      <ProjectList />
+      <div className="profile-centerBody-flex">
+        <Profile />
+        <div className="centerBody">
+          {previewProject
+            ? (
+            <PreviewProject id={previewProject} />
+              )
+            : (
+            <Centerbory />
+              )}
+        </div>
+        <ProjectList />
+      </div>
     </>
   )
 }

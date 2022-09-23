@@ -6,7 +6,7 @@ function Profile () {
   const technologyList = [{}] // ajust
   // add contato, add soft skills, add sobre mim, add front-end
   return (
-    <div>
+    <div className='profile'>
       <img src={photoProfile} alt="photoProfile" width="200" height="200" />
       <div>
         <p>
@@ -20,6 +20,13 @@ function Profile () {
           <p>{technology.name}</p>
         </li>
       ))}</ul>
+      <a className='button'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        button
+      </a>
     </div>
   )
 }

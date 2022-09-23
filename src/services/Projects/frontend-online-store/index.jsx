@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-// import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import React, { useState } from 'react'
 import Search from './pages/Search'
 import ShoppingCart from './pages/ShoppingCart'
 import ProductDetails from './pages/ProductDetails'
@@ -16,19 +15,19 @@ function FrontendOnlineStore () {
     isLoading: false
   })
 
-  useEffect(() => {
-    const fullProductCart = JSON.parse(localStorage.getItem('fullProductCart'))
-    const productCart = JSON.parse(localStorage.getItem('productCart'))
-    const productCountControl = JSON.parse(localStorage.getItem('productCountControl'))
-    if (fullProductCart !== null) {
-      setState({
-        ...state,
-        fullProductCart,
-        productCart,
-        productCountControl
-      })
-    }
-  }, [])
+  // useEffect(() => {
+  //   const fullProductCart = JSON.parse(localStorage.getItem('fullProductCart'))
+  //   const productCart = JSON.parse(localStorage.getItem('productCart'))
+  //   const productCountControl = JSON.parse(localStorage.getItem('productCountControl'))
+  //   if (fullProductCart !== null) {
+  //     setState({
+  //       ...state,
+  //       fullProductCart,
+  //       productCart,
+  //       productCountControl
+  //     })
+  //   }
+  // }, [])
 
   const parseProductCart = (fullProductCart) => {
     let cartTotal = 0
