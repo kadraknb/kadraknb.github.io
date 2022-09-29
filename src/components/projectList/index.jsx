@@ -8,7 +8,7 @@ function ProjectList () {
   const [show, setShow] = useState(false)
 
   return (
-    <>
+    <div className='listProject'>
       <p>lista de projeto</p>
       <ul>
         {projectList.map((project, index) => (
@@ -33,7 +33,7 @@ function ProjectList () {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 

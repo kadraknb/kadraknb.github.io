@@ -1,32 +1,30 @@
 import React from 'react'
-
-import photoProfile from '../../images/image.jpg'
+// import { GithubOriginalIcon, GithubOriginalWordmarkIcon } from 'react-devicons'
+// import ReactOriginalIcon from 'react-devicons/react/original'
+import photoProfile from '../.././images/image.jpg'
+import iconTec from '../../images/iconTec'
 
 function Profile () {
-  const technologyList = [{}] // ajust
   // add contato, add soft skills, add sobre mim, add front-end
   return (
     <div className='profile'>
+      <link rel="stylesheet" href="devicon.min.css"></link>
       <img src={photoProfile} alt="photoProfile" width="200" height="200" />
+      <i className="devicon-devicon-plain imgTec"></i>
+      {/* <ReactOriginalIcon className="my-class" /> */}
+      {/* <GithubOriginalWordmarkIcon /> */}
+{/* <GithubOriginalIcon size="2em" /> */}
       <div>
-        <p>
+        {/* <p>
           Ola, estou iniciando na programação pelo curso da <span>TRYBE.....</span>
         </p>
-        <p>.....................</p>
+        <p>.....................</p> */}
       </div>
-      <ul>{technologyList.map((technology) => (
-        <li key={technology.name}>
-          <img src={technology.img} alt='technology icon' width="20" height="20" />
-          <p>{technology.name}</p>
+      <ul className='ulIconTec'>{Object.entries(iconTec).map((technology) => (
+        <li key={technology[0]} className='liIconTec'>
+          <img src={technology[1]} alt='technology icon' className='imgTec'/>
         </li>
       ))}</ul>
-      <a className='button'>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        button
-      </a>
     </div>
   )
 }
