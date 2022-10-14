@@ -1,6 +1,9 @@
 import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import 'devicon'
+import 'react-devicon'
+import 'react-devicons'
+import 'redux-devtools-extension'
 import './App.css'
 import Centerbory from './components/centerBody'
 import PreviewProject from './components/previewProject'
@@ -13,6 +16,8 @@ function App () {
   return (
     <>
       <div className="profile-centerBody-flex">
+      <link rel="stylesheet" href="devicon.min.css"></link>
+
         <Profile />
         <div className="centerBody">
           {previewProject

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Modal from 'react-bootstrap/Modal'
 
 import Context from '../../context/Context'
+import './projectList.css'
 
 function ProjectDetail ({ project, show, setShow }) {
   // ajust info grupo,
@@ -11,29 +12,38 @@ function ProjectDetail ({ project, show, setShow }) {
   const handleClose = () => setShow(false)
   return (
     <div>
-      <>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>
-              <p>{project.name}</p>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <img src={project.gif} alt="gif do projeto" width="250" />
-            <p>{project.description}</p>
-            <p>{`tecnologia foco ${project.tecFocus}`}</p>
-            {project.projectGroup && <p>projeto em grupo</p>} {/* // ajust */}
-            {project.projectGroup && <p>info grupo</p>} {/* // ajust */}
-            {project.listTec.map((TecIcon, index) => (
-              <img key={index} src={TecIcon} alt="icone da pecnologia" />
-            ))}
-            <a className="button" onClick={() => setPreviewProject(project.id)}>
+      <Modal show={show} onHide={handleClose} className="modalPD">
+        <Modal.Header closeButton>
+          <Modal.Title className='modalTitle'>
+            <p>{project.name}</p>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <img src={project.gif} alt="gif do projeto" width="250" className='modalImg'/>
+          <p className='efeito-vidro'>{project.description}</p>
+          <p>{`tecnologia foco ${project.tecFocus}`}</p>
+          {project.projectGroup && <p>projeto em grupo</p>} {/* // ajust */}
+          {project.projectGroup && <p>info grupo</p>} {/* // ajust */}
+          <div className='divModalImgTec '>
+          {project.listTec.map((TecIcon, index) => (
+            <img key={index} src={TecIcon} alt="icone da pecnologia" className='imgTec modalImgTec'/>
+          ))}
+          </div>
+          <div className="divButton">
+            <a
+              className="button"
+              onClick={() => {
+                setPreviewProject(project.id)
+                handleClose()
+              }}
+            >
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Rodar projeto
             </a>
+            <span className='ModalSeparar'></span>
             <a className="button" href={project.repository}>
               <span></span>
               <span></span>
@@ -41,10 +51,10 @@ function ProjectDetail ({ project, show, setShow }) {
               <span></span>
               repositório
             </a>
-          </Modal.Body>
-          <Modal.Footer></Modal.Footer>
-        </Modal>
-      </>
+          </div>
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
     </div>
   )
 }

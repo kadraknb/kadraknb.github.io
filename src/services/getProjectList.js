@@ -13,7 +13,9 @@
 
 import iconDOM from '../images/jsDom.png'
 import gifDOM from '../images/giphy.gif'
+import iconTec from '../images'
 
+const { react, redux } = iconTec
 const projectList = [
   {
     id: 'Trybewallet',
@@ -21,7 +23,7 @@ const projectList = [
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'react-redux',
-    listTec: ['react-redux', 'React'],
+    listTec: [react, redux],
     projectGroup: false,
     infGroup: [''],
     repository: '',
