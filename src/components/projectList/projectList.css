@@ -1,3 +1,23 @@
+.pLTitle {
+  color: #03e9f4;
+  text-transform: uppercase;
+  filter: drop-shadow(1px 1px 9px #03e9f4);
+  width: max-content;
+}
+.listProject {
+  display: flex;
+  flex-direction:column;
+  height: 100vh;
+}
+.ulProj {
+  list-style: none;
+  position: relative;
+  right: 10px;
+}
+.imgLP {
+  filter: drop-shadow(1px 1px 9px #03e9f4);
+}
+
 
 .modal-content {
   color: #03e9f4;
@@ -7,16 +27,12 @@
 }
 .modal {
   --bs-modal-header-border-color: #59920e:
-  /* --bs-modal-header-border-color: var(#59920e); */
 }
 .modal-footer {
   border-top:#000000;
 }
 .btn-close{
-  /* box-shadow: 0 0 5px #03e9f4, 0 0 2px #03e9f4, 0 0 5px #03e9f4,
-  0 0 2px #03e9f4; */
   filter: drop-shadow(1px 1px 9px #03e9f4) brightness(100);
-
 }
 
 .button {
@@ -59,7 +75,6 @@
   margin: 0;
 }
 .efeito-vidro {
-/* From https://css.glass */
 background: rgba(255, 255, 255, 0);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

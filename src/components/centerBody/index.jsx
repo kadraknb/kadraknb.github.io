@@ -4,25 +4,25 @@ import './centerBody.css'
 
 function Centerbory () {
   return (
-    <Accordion className="sobreMim">
+    <Accordion defaultActiveKey="0" className="sobreMim">
       <Accordion.Item eventKey="0" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong>Sobre mim</strong>
+          <strong className='headerFont'>Sobre mim</strong>
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body className='fontBody'>
           Sou o vagner. <br />
           Moro no destrito federal e estou em transição de carreira onde eu
           trabalhei 5 anos como operado de maquina para a carreira de
-          desenvolvedor Full Stack. Apaixonado por tecnologia, decidi mudar de
+          desenvolvedor Full Stack. <br /> Apaixonado por tecnologia, decidi mudar de
           rumos em busca de satisfação profissional que somente um trabalho na
           área que amo poderia me proporcionar.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong>Possuo conhecimento em</strong>
+          <strong className='headerFont'>Possuo conhecimento em</strong>
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body className='fontBody'>
           <strong>Desenvolvimento Front-end</strong>: React, Estado e Eventos,
           Componentes Controlados, Router, Testes com RTL e Jest, Redux com
           React, Context API e React Hooks, HTML e CSS. <br />
@@ -40,9 +40,9 @@ function Centerbory () {
       </Accordion.Item>
       <Accordion.Item eventKey="2" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong>Conhecimento em desenvolvimento</strong>
+          <strong className='headerFont'>Conhecimento em desenvolvimento</strong>
         </Accordion.Header>
-        <Accordion.Body>Inglês, TypeScript, MongoDB e Python</Accordion.Body>
+        <Accordion.Body className='fontBody'>Inglês, TypeScript, MongoDB e Python</Accordion.Body>
       </Accordion.Item>
     </Accordion>
   )

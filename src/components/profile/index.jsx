@@ -1,6 +1,10 @@
 import React from 'react'
+import clipboardCopy from 'clipboard-copy'
+// import { Link } from 'react-router-dom'
+
 // import { GithubOriginalIcon } from 'react-devicons'
-import photoProfile from '../.././images/image.jpg'
+import './profile.css'
+import photoProfile from '../.././images/image (1).jpg'
 import iconTec from '../../images'
 
 function Profile () {
@@ -10,25 +14,43 @@ function Profile () {
       <img
         src={photoProfile}
         alt="photoProfile"
-        className="imgTec"
-        width="200"
-        height="200"
+        className="imgProfile"
       />
       <div>
-        <p>Ola, sou o Vagner</p>
+        <h5 className='nomeP'>Vagner Cardoso dos Santos</h5>
       </div>
       <div className="contatos">
         <div>
-          <img src={iconTec.email} alt="technology icon" className="imgTec" />
-          <p className='Clink'>vagner_cardoso_s@outlook.com</p>
+          <img
+            src={iconTec.tec.gitHub}
+            alt="technology icon"
+            className="imgC"
+          />
+          <a target='_blank' href="https://github.com/kadraknb" className="Clink" rel="noreferrer">
+             GitHub
+          </a>
         </div>
         <div>
-          <img src={iconTec.linkedin} alt="technology icon" className="imgTec" />
-          <a href="https://www.linkedin.com/in/vagner-cardos-santos/" className='Clink'>GitHub</a>
+          <img
+            src={iconTec.linkedin}
+            alt="technology icon"
+            className="imgC"
+          />
+          <a target='_blank'
+            href="https://www.linkedin.com/in/vagner-cardos-santos/"
+            className="Clink" rel="noreferrer"
+          >
+            Linkedin
+          </a>
         </div>
-        <div>
-          <img src={iconTec.tec.gitHub} alt="technology icon" className="imgTec" />
-          <a href="https://github.com/kadraknb" className='Clink'>Linkedin</a>
+        <div className='emailCopy'>
+          <img src={iconTec.email} alt="technology icon" className="imgC" />
+          <h7
+            className="Clink"
+            onClick={() => clipboardCopy('vagner_cardoso_s@outlook.com')}
+          >
+            Copiar email <strong>AQUI</strong>
+          </h7>
         </div>
       </div>
       <ul className="ulIconTec">

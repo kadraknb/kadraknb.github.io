@@ -1,5 +1,49 @@
+.imgProfile {
+  width: 253px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.nomeP{
+  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 146, 243, 0.178));
+}
+.imgC {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
+}
 .contatos {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
   
+}
+.Clink {
+  color: aqua;
+  /* background-color: aliceblue; */
+  /* color: var(--bs-link-color); */
+  font-size: larger;
+}
+.profile {
+  /* background-color: #050801; */
+
+  /* position:absolute ; */
+  /* float: left; */
+  width: 280px;
+  /* height: 800px; */
+}
+.ulIconTec{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 100px;
+}
+.liIconTec{
+  height: 100px;
+  width: fit-content;
 }

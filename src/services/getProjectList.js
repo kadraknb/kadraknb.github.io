@@ -59,7 +59,7 @@ const projectList = [
   },
   {
     id: 'PixelsArt',
-    name: 'Project pixels art',
+    name: 'pixels art',
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'DOM',
