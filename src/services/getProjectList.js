@@ -6,7 +6,6 @@
 //   tecFocus: '',
 //   listTec: [''],
 //   projectGroup: false,
-//   infGroup: [''],
 //   repository: '',
 //   description: '',
 // },
@@ -15,8 +14,20 @@ import iconDOM from '../images/jsDom.png'
 import gifDOM from '../images/giphy.gif'
 import iconTec from '../images'
 
-const { react, redux } = iconTec
+const { react, redux, js, css } = iconTec
 const projectList = [
+  {
+    id: 'Trivia',
+    name: 'Trivia',
+    icon: iconDOM,
+    gif: gifDOM,
+    tecFocus: 'Redux',
+    listTec: [react, redux, js, css],
+    projectGroup: true,
+    repository: '',
+    description:
+      'Um jogo de perguntas e respostas baseado no jogo Trivia (tipo um show do milhão americano rs) utilizado React e Redux, desenvolvido em grupo'
+  },
   {
     id: 'Trybewallet',
     name: 'Trybewallet',
@@ -25,7 +36,6 @@ const projectList = [
     tecFocus: 'react-redux',
     listTec: [react, redux],
     projectGroup: false,
-    infGroup: [''],
     repository: '',
     description: `Neste projeto esta desenvolvido uma carteira de controle de gastos com conversor de moedas,
      ao utilizar essa aplicação um usuário deverá ser capaz de:
@@ -41,9 +51,9 @@ const projectList = [
     tecFocus: 'JSON',
     listTec: ['html', 'js', 'DOM', 'JSON'],
     projectGroup: false,
-    infGroup: [''],
     repository: 'ajust',
-    description: 'Página web de E-commerce, projeto focado na utilização de API.'
+    description:
+      'Página web de E-commerce, projeto focado na utilização de API.'
   },
   {
     id: 'ShoppingCart',
@@ -53,9 +63,9 @@ const projectList = [
     tecFocus: 'JSON',
     listTec: ['html', 'js', 'DOM', 'JSON'],
     projectGroup: false,
-    infGroup: [''],
     repository: 'ajust',
-    description: 'Página web de E-commerce, projeto focado na utilização de API.'
+    description:
+      'Página web de E-commerce, projeto focado na utilização de API.'
   },
   {
     id: 'PixelsArt',
@@ -65,12 +75,10 @@ const projectList = [
     tecFocus: 'DOM',
     listTec: ['html', 'js', 'DOM'],
     projectGroup: false,
-    infGroup: [''],
     repository: 'ajust',
     description:
       'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
   }
-
 ]
 
 export default projectList
