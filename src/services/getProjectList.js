@@ -21,10 +21,10 @@ const projectList = [
     name: 'Trivia',
     icon: iconDOM,
     gif: gifDOM,
-    tecFocus: 'Redux',
+    tecFocus: 'Redux, Redux-thunk',
     listTec: [react, redux, js, css],
     projectGroup: true,
-    repository: '',
+    repository: 'https://github.com/kadraknb/Project-trivia',
     description:
       'Um jogo de perguntas e respostas baseado no jogo Trivia (tipo um show do milhão americano rs) utilizado React e Redux, desenvolvido em grupo'
   },

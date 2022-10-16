@@ -44,7 +44,7 @@ function ProjectDetail ({ project, show, setShow }) {
               Rodar projeto
             </a>
             <span className='ModalSeparar'></span>
-            <a className="button" href={project.repository}>
+            <a target='_blank' className="button" href={project.repository} rel="noreferrer">
               <span></span>
               <span></span>
               <span></span>
