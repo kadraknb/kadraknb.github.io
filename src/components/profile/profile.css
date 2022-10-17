@@ -5,6 +5,8 @@
 }
 .nomeP{
   filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
+  border-bottom: 1px solid #00909785;
+
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 146, 243, 0.178));
 }
 .imgC {
@@ -16,21 +18,19 @@
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  
+}
+.contatos .list-group-item {
+  --bs-list-group-bg: #008b9f21;
+  --bs-list-group-border-color: rgb(0 217 255 / 23%);
+  box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
 }
 .Clink {
+  margin-left: 9PX;
   color: aqua;
-  /* background-color: aliceblue; */
-  /* color: var(--bs-link-color); */
   font-size: larger;
 }
 .profile {
-  /* background-color: #050801; */
-
-  /* position:absolute ; */
-  /* float: left; */
   width: 280px;
-  /* height: 800px; */
 }
 .ulIconTec{
   display: flex;
@@ -41,7 +41,11 @@
   padding: 0px;
   width: fit-content;
   height: fit-content;
-  margin-top: 100px;
+  margin-top: 50px;
+  background-color: #008b9f21;
+  border: 1px solid rgb(0 217 255 / 23%);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
 }
 .liIconTec{
   height: 100px;

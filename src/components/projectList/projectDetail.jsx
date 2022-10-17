@@ -7,7 +7,7 @@ import './projectList.css'
 
 function ProjectDetail ({ project, show, setShow }) {
   // ajust info grupo,
-  const { setPreviewProject } = useContext(Context)
+  const { setPreviewProject, setModalShow } = useContext(Context)
 
   const handleClose = () => setShow(false)
   return (
@@ -22,8 +22,7 @@ function ProjectDetail ({ project, show, setShow }) {
           <img src={project.gif} alt="gif do projeto" width="250" className='modalImg'/>
           <p className='efeito-vidro'>{project.description}</p>
           <p>{`tecnologia foco ${project.tecFocus}`}</p>
-          {project.projectGroup && <p>projeto em grupo</p>} {/* // ajust */}
-          {project.projectGroup && <p>info grupo</p>} {/* // ajust */}
+          {project.projectGroup && <p>projeto em grupo</p>}
           <div className='divModalImgTec '>
           {project.listTec.map((TecIcon, index) => (
             <img key={index} src={TecIcon} alt="icone da pecnologia" className='imgTec modalImgTec'/>
@@ -34,6 +33,7 @@ function ProjectDetail ({ project, show, setShow }) {
               className="button"
               onClick={() => {
                 setPreviewProject(project.id)
+                setModalShow(true)
                 handleClose()
               }}
             >

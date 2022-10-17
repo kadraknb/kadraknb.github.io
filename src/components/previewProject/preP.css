@@ -2,18 +2,14 @@
   padding: 0;
   color: aliceblue;
   border-radius: 5px;
-
-
 }
 .preP div:nth-child(1) .modal-content {
-  /* width: 80vw; */
   background: none;
 }
 .preP div:nth-child(1) {
   width: 80vw;
 }
 .preP .modal-dialog {
-
   position: absolute;
   left: 10%;
 }
@@ -22,17 +18,12 @@
   backdrop-filter: blur(5.2px);
   -webkit-backdrop-filter: blur(5.2px);
   border: 1px solid rgba(0, 247, 255, 0.856);
-
 }
 .maxH {
   max-height: 100%;
-  /* width: 91vw; */
-  
 }
 .project div:nth-child(1) {
-  /* background: rebeccapurple; */
   margin: 0;
-  /* border: 1px solid red; */
   width: auto;
   max-height: 85vh;
   overflow: auto;

@@ -5,7 +5,8 @@ import Context from './Context'
 
 function Provider ({ children }) {
   const [previewProject, setPreviewProject] = useState('Trivia')
-  const value = { previewProject, setPreviewProject }
+  const [modalShow, setModalShow] = useState(false)
+  const value = { previewProject, setPreviewProject, modalShow, setModalShow }
 
   return <Context.Provider value={value}>{children}</Context.Provider>
 }

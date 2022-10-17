@@ -8,25 +8,25 @@ function ProjectList () {
   const [show, setShow] = useState(false)
 
   return (
-    <div className='listProject efeito-vidro'>
-      <h2 className='pLTitle'>projetos</h2>
+    <div className="listProject efeito-vidro">
+      <h2 className="pLTitle">projetos</h2>
 
-      <ul className='ulProj'>
+      <ul className="ulProj">
         {projectList.map((project, index) => (
-          <li key={index} className='liProj' onClick={() => {
-            setSelectedProject(index)
-            setShow(!show)
-          }}>
-
-              <img
-                src={project.icon}
-                width="100"
-                height="100"
-                alt="project icon"
-                className='imgLP'
-              />
-              <p className='pLTitle'>{project.name}</p>
-
+          <li
+            key={index}
+            className="liProj"
+            onClick={() => {
+              setSelectedProject(index)
+              setShow(!show)
+            }}
+          >
+            <img
+              src={project.icon}
+              alt="project icon"
+              className="imgLP"
+            />
+            <p className="pLTitle p-li-title">{project.name}</p>
             {selectedProject === index && (
               <ProjectDetail show={show} setShow={setShow} project={project} />
             )}

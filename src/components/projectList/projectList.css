@@ -1,8 +1,13 @@
 .pLTitle {
-  color: #03e9f4;
+  color: #03e8f4;
   text-transform: uppercase;
-  filter: drop-shadow(1px 1px 9px #03e9f4);
   width: max-content;
+  margin: 5px auto;
+}
+.p-li-title {
+  color: #03e8f4c5;
+  font-size: large;
+  font-weight: bold;
 }
 .listProject {
   display: flex;
@@ -12,32 +17,39 @@
 .ulProj {
   list-style: none;
   position: relative;
-  right: 10px;
+  padding: 0;
+  width: 200px;
 }
 .imgLP {
   filter: drop-shadow(1px 1px 9px #03e9f4);
+  margin-left: 17%;
+  margin-top: 5px;
+  width: 130px;
+  height: 130px;
 }
-
-
+.liProj {
+  width: max-content;
+  background-color: #008b9f21;
+  border: 1px solid rgb(0 217 255 / 23%);
+  box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
+  width: 200px;
+}
+/* /////////////////////// */
 .modal-content {
   color: #03e9f4;
   background-color: #000000;
   box-shadow: 0 0 5px #03e9f4, 0 0 2px #03e9f4, 0 0 5px #03e9f4,
     0 0 2px #03e9f4;
-    
 }
 .modal {
-  
   --bs-modal-header-border-color: #59920e:
 }
-
 .modal-footer {
   border-top:#000000;
 }
 .btn-close{
   filter: drop-shadow(1px 1px 9px #03e9f4) brightness(100);
 }
-
 .button {
   margin: 0;
   margin-bottom: 74px;
@@ -45,14 +57,12 @@
 .ModalSeparar{
   margin: 10px;
 }
-
 .divButton {
   height: fit-content;;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-
 .divModalImgTec {
   display: flex;
   justify-content: center;
@@ -66,13 +76,11 @@
   justify-content: center;
   filter: drop-shadow(1px 1px 9px #03e9f4) brightness(1);
   margin-bottom: 20px;
-
 }
 .modalTitle {
   margin: 0;
   height: 33.33px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-
 }
 .btn-close {
   margin: 0;
