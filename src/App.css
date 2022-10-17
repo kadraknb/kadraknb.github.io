@@ -116,3 +116,12 @@ body {
   filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0006);
   }
+.efeito-vidro {
+  background: rgba(37, 37, 37, 0.178);
+  box-shadow: 0 4px 30px rgba(7, 237, 253, 0.329);
+  backdrop-filter: blur(5.2px);
+  border-radius: 5px;
+  
+  -webkit-backdrop-filter: blur(5.2px);
+  border: 1px solid rgba(0, 225, 255, 0.144);
+  }

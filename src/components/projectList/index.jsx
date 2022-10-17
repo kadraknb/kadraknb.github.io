@@ -8,7 +8,7 @@ function ProjectList () {
   const [show, setShow] = useState(false)
 
   return (
-    <div className='listProject'>
+    <div className='listProject efeito-vidro'>
       <h2 className='pLTitle'>projetos</h2>
 
       <ul className='ulProj'>

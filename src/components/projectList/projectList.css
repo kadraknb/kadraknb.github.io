@@ -24,10 +24,13 @@
   background-color: #000000;
   box-shadow: 0 0 5px #03e9f4, 0 0 2px #03e9f4, 0 0 5px #03e9f4,
     0 0 2px #03e9f4;
+    
 }
 .modal {
+  
   --bs-modal-header-border-color: #59920e:
 }
+
 .modal-footer {
   border-top:#000000;
 }
@@ -73,12 +76,4 @@
 }
 .btn-close {
   margin: 0;
-}
-.efeito-vidro {
-background: rgba(255, 255, 255, 0);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.2px);
--webkit-backdrop-filter: blur(5.2px);
-border: 1px solid rgba(255, 255, 255, 0.05);
 }

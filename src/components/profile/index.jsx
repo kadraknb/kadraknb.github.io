@@ -10,7 +10,7 @@ import iconTec from '../../images'
 function Profile () {
   // add contato, add soft skills, add sobre mim, add front-end
   return (
-    <div className="profile">
+    <div className="profile efeito-vidro">
       <img
         src={photoProfile}
         alt="photoProfile"
