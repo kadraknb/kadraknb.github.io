@@ -11,10 +11,10 @@ function Centerbory () {
         </Accordion.Header>
         <Accordion.Body className='fontBody'>
           Sou o vagner. <br />
-          Moro no distrito federal e estou em transição de carreira onde eu
+          Moro no distrito federal e estou em transição de carreira, onde eu
           trabalhei 5 anos como operado de maquina para a carreira de
           desenvolvedor Full Stack. <br /> Apaixonado por tecnologia, decidi mudar de
-          rumos em busca de satisfação profissional que somente um trabalho na
+          carreira em busca de satisfação profissional que somente um trabalho na
           área que amo poderia me proporcionar.
         </Accordion.Body>
       </Accordion.Item>
@@ -34,7 +34,7 @@ function Centerbory () {
           <strong>Soft Skills</strong>: Metodologias ágeis e habilidades
           comportamentais. <br />
           <br />
-          <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, JavaScript e
+          <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, TypeScript, JavaScript e
           JS ES6.
         </Accordion.Body>
       </Accordion.Item>
@@ -42,7 +42,7 @@ function Centerbory () {
         <Accordion.Header className="headerSM">
           <strong className='headerFont'>Conhecimento em desenvolvimento</strong>
         </Accordion.Header>
-        <Accordion.Body className='fontBody'>Inglês, TypeScript, MongoDB e Python</Accordion.Body>
+        <Accordion.Body className='fontBody'>Inglês, MongoDB e Python.</Accordion.Body>
       </Accordion.Item>
     </Accordion>
   )
