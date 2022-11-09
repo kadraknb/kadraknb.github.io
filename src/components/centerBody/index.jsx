@@ -11,7 +11,7 @@ function Centerbory () {
         </Accordion.Header>
         <Accordion.Body className='fontBody'>
           Sou o vagner. <br />
-          Moro no destrito federal e estou em transição de carreira onde eu
+          Moro no distrito federal e estou em transição de carreira onde eu
           trabalhei 5 anos como operado de maquina para a carreira de
           desenvolvedor Full Stack. <br /> Apaixonado por tecnologia, decidi mudar de
           rumos em busca de satisfação profissional que somente um trabalho na
