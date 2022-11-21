@@ -2,16 +2,17 @@
   padding: 0;
   color: aliceblue;
   border-radius: 5px;
+  width: 80vw;
+
 }
-.preP div:nth-child(1) .modal-content {
+.preP .modal-dialog:nth-child(1) .modal-content {
   background: none;
 }
-.preP div:nth-child(1) {
-  width: 80vw;
-}
 .preP .modal-dialog {
-  position: absolute;
-  left: 10%;
+  width: 80vw;
+  --bs-modal-width: auto;
+  /* position: absolute; */
+  /* left: 10%; */
 }
 .preP-efeito-vidro {
   box-shadow: 0 4px 30px rgba(0, 198, 212, 0.671);
@@ -22,7 +23,7 @@
 .maxH {
   max-height: 100%;
 }
-.project div:nth-child(1) {
+.projectPreView #body:nth-child(1) {
   margin: 0;
   width: auto;
   max-height: 85vh;

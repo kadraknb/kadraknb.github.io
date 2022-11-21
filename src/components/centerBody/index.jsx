@@ -10,10 +10,10 @@ function Centerbory () {
           <strong className='headerFont'>Sobre mim</strong>
         </Accordion.Header>
         <Accordion.Body className='fontBody'>
-          Sou o vagner. <br />
-          Moro no distrito federal e estou em transição de carreira, onde eu
-          trabalhei 5 anos como operado de maquina para a carreira de
-          desenvolvedor Full Stack. <br /> Apaixonado por tecnologia, decidi mudar de
+          Ola, sou o Vagner. <br />
+          Moro no Distrito Federal e estou em transição de carreira, onde
+          trabalhei por 5 anos como operado de maquina para desenvolvedor Full Stack.
+           <br /> Apaixonado por tecnologia, decidi mudar de
           carreira em busca de satisfação profissional que somente um trabalho na
           área que amo poderia me proporcionar.
         </Accordion.Body>

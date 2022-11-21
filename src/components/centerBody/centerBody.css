@@ -3,7 +3,9 @@
   top: 100px;
   width: 100%;
 }
-
+.centerBody {
+  width: 60%;
+}
 .buttonSM {
   --bs-accordion-border-color: #03e9f4;
   --bs-accordion-bg: rgb(0, 0, 0);

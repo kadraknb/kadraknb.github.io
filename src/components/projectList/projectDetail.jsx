@@ -8,43 +8,77 @@ import './projectList.css'
 function ProjectDetail ({ project, show, setShow }) {
   // ajust info grupo,
   const { setPreviewProject, setModalShow } = useContext(Context)
+  const {
+    name,
+    description,
+    gif,
+    tecFocus,
+    projectGroup,
+    id,
+    repository,
+    preview,
+    habilidadeFocada
+  } = project
 
   const handleClose = () => setShow(false)
   return (
     <div>
       <Modal show={show} onHide={handleClose} className="modalPD">
-        <Modal.Header closeButton>
-          <Modal.Title className='modalTitle'>
-            <p>{project.name}</p>
+        <Modal.Header className='modalHeader' closeButton>
+          <Modal.Title className="modalTitle">
+            <p>{name}</p>
           </Modal.Title>
         </Modal.Header>
+        <hr className='Modal-hr'/>
         <Modal.Body>
-          <img src={project.gif} alt="gif do projeto" width="250" className='modalImg'/>
-          <p className='efeito-vidro'>{project.description}</p>
-          <p>{`tecnologia foco ${project.tecFocus}`}</p>
-          {project.projectGroup && <p>projeto em grupo</p>}
-          <div className='divModalImgTec '>
-          {project.listTec.map((TecIcon, index) => (
-            <img key={index} src={TecIcon} alt="icone da pecnologia" className='imgTec modalImgTec'/>
-          ))}
-          </div>
+          <img
+            src={gif}
+            alt="gif do projeto"
+            width="250"
+            className="modalImg"
+          />
+          <hr />
+          <h6>{`Foco de aprendizado: ${tecFocus}`}</h6>
+          {projectGroup && <h6>projeto em grupo</h6>}
+          <hr />
+          <h4>
+            O que foi desenvolvido
+            <h6 className="margin-description">{description}</h6>
+          </h4>
+          <hr />
+          <h4>
+            Habilidades desenvolvida
+            <ul className="">
+              {habilidadeFocada.map((habilidade, i) => (
+                <li key={i}><h6>{habilidade}</h6></li>
+              ))}
+            </ul>
+          </h4>
+          <hr />
           <div className="divButton">
+            {preview && (
+              <a
+                className="button modalButton"
+                onClick={() => {
+                  setPreviewProject(id)
+                  setModalShow(true)
+                  handleClose()
+                }}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Rodar projeto
+              </a>
+            )}
+            <span className="ModalSeparar"></span>
             <a
-              className="button"
-              onClick={() => {
-                setPreviewProject(project.id)
-                setModalShow(true)
-                handleClose()
-              }}
+              target="_blank"
+              className="button modalButton"
+              href={repository}
+              rel="noreferrer"
             >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              Rodar projeto
-            </a>
-            <span className='ModalSeparar'></span>
-            <a target='_blank' className="button" href={project.repository} rel="noreferrer">
               <span></span>
               <span></span>
               <span></span>
@@ -66,7 +100,9 @@ ProjectDetail.propTypes = {
     tecFocus: PropTypes.string,
     projectGroup: PropTypes.bool,
     id: PropTypes.string,
+    preview: PropTypes.bool,
     repository: PropTypes.string,
+    habilidadeFocada: PropTypes.arrayOf(PropTypes.string),
     listTec: PropTypes.arrayOf(PropTypes.string)
   }).isRequired,
   show: PropTypes.bool.isRequired,

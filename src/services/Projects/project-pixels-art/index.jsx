@@ -8,7 +8,7 @@ function PixelsArt () {
   }, [])
 
   return (
-    <div id='body'>
+    <div id='bodyPixelsArt'>
       <h1 className="centerFlex" id="title">Paleta de Cores</h1>
       <div className="centerFlex" id="color-palette">
         <div className="color cor1 selected"></div>
@@ -18,11 +18,11 @@ function PixelsArt () {
         <input id="corrgb" className="color " type="color" />
       </div>
       <div className="center">
-        <label className="centerFlex" >
-          <p>quantidade de pixel:</p>
-          <input type="number" id="board-size" min="1" max="100" value="" />
+        <div className="centerFlex" >
+          <p id='P-quantPix'>quantidade de pixel:</p>
+          <input type="number" id="board-size" min="1" max="100" />
           <button id="generate-board" >Aplicar</button>
-        </label>
+        </div>
       </div>
       <div className="center" id="pixel-board">
         <button className="centerFlex" id="clear-board" >RESET</button>

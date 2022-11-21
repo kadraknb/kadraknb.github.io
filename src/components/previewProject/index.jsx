@@ -30,7 +30,7 @@ function PreviewProject () {
           <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
         <Modal.Body className='efeito-vidro p-body'>
-          <div className='project'>
+          <div className='projectPreView'>
 
         <Project />
           </div>
