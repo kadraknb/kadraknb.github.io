@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 // import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import Context from '../../context/Context'
+import listProject from '../../services/getProjectList'
 import './preP.css'
 
 function PreviewProject () {
@@ -12,10 +13,13 @@ function PreviewProject () {
   }, [modalShow])
 
   const handleClose = () => setModalShow(false)
+
   const Project = () => {
     const Project = require('../../services/Projects')[previewProject]
     return <Project />
   }
+
+  const { name } = listProject.find((project) => project.id === previewProject)
 
   return (
     <div className='preP'>
@@ -27,7 +31,7 @@ function PreviewProject () {
         keyboard={false}
       >
         <Modal.Header closeButton className='preP-efeito-vidro'>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
         <Modal.Body className='efeito-vidro p-body'>
           <div className='projectPreView'>

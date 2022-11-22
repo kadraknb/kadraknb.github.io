@@ -1,8 +1,13 @@
 function script () {
-  document.querySelector('#corrgb').style.backgroundColor = document.getElementById('corrgb').value
-  document.addEventListener('mousemove', () => {
-    document.querySelector('#corrgb').style.backgroundColor = document.getElementById('corrgb').value
+  document.addEventListener('change', () => {
+    const pixelBoard = document.querySelector('#pixel-board')
+    pixelBoard && (
+      pixelBoard.style.backgroundColor = document.querySelector('.selected').style.backgroundColor
+    )
+    corRGB.style.backgroundColor = document.getElementById('corrgb').value
   })
+  const corRGB = document.querySelector('#corrgb')
+  corRGB.style.backgroundColor = document.getElementById('corrgb').value
   const ID_BOARD = '#pixel-board2'
 
   function randomColorPalette () {

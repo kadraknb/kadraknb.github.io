@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="centerFlex" id="title">Paleta de Cores</h1>
+
+    <div class="centerFlex" id="color-palette">
+      <div class="color cor1 selected"></div>
+      <div class="color cor2"></div>
+      <div class="color cor3"></div>
+      <div class="color cor4"></div>
+      <input id="corrgb" class="color " type="color">
+    </div>
+    
+    <div class="center">
+      <label class="centerFlex" for="board-size">
+        <p>quantidade de pixel:</p>
+        <input  type="number" id="board-size" min="1" max="100" value="">
+        <button id="generate-board" >Aplicar</button>
+      </label>
+      
+    </div>
+    
+    
+    <div class="center" id="pixel-board">
+      <button class="centerFlex" id="clear-board" >RESET</button>
+      <div id="pixel-board2"></div>
+    </div>
+    <script src="./script.js"></script>
+    
+</body>
+</html>

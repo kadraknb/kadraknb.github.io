@@ -8,10 +8,10 @@ function ShoppingCart () {
   }, [])
 
   return (
-    <div className='body'>
-      <header className="header">
-        <div className="container-title">
-          <span className="title">
+    <div className='SCbody'>
+      <header className="SCheader">
+        <div className="SCcontainer-title">
+          <span className="SCtitle">
             <strong>shopping</strong>
           </span>
         </div>

@@ -22,8 +22,8 @@ const script = () => {
   // Função que remove o "carreganddo...": //
   function removeLoading () {
     const loading = document.querySelector('.loading')
-    if (mainList.innerHTML !== loading) {
-      loading.outerHTML = ''
+    if (mainList.innerHTML !== loading && loading) {
+      loading.outerHTML = null
     }
   }
 
@@ -136,28 +136,30 @@ const script = () => {
   // Função que adiciona os itens no Carrinho de Compras: //
   function addItemsCart () {
     const itemsCartList = document.querySelector('.items')
-
-    itemsCartList.addEventListener('click', async (event) => {
-      if (event.target.className === 'item__add') {
-        const sku = event.target.parentNode.querySelector('span.item__sku').innerText
-        const namedItem = await itemDetails(sku)
-        const listCart = createCartItemElement(namedItem)
-        cartItemsElements.appendChild(listCart)
-        savingCart()
-        updateInfo()
-      }
-    })
+    itemsCartList && (
+      itemsCartList.addEventListener('click', async (event) => {
+        if (event.target.className === 'item__add') {
+          const sku = event.target.parentNode.querySelector('span.item__sku').innerText
+          const namedItem = await itemDetails(sku)
+          const listCart = createCartItemElement(namedItem)
+          cartItemsElements.appendChild(listCart)
+          savingCart()
+          updateInfo()
+        }
+      })
+    )
   }
 
   // Função que limpa todos os items do carrinho de compras: //
   function cleanCart () {
     const buttonClearCart = document.querySelector('.empty-cart')
-
-    buttonClearCart.addEventListener('click', () => {
-      cartItemsElements.innerHTML = ''
-      savingCart()
-      updateInfo()
-    })
+    buttonClearCart && (
+      buttonClearCart.addEventListener('click', () => {
+        cartItemsElements.innerHTML = ''
+        savingCart()
+        updateInfo()
+      })
+    )
   }
 
   // Função que mostra na tela menor os items armazenados no localStorage ao reiniciar aplicação: //
