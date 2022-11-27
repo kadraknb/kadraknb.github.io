@@ -34,8 +34,7 @@ function Centerbory () {
           <strong>Soft Skills</strong>: Metodologias ágeis e habilidades
           comportamentais. <br />
           <br />
-          <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, TypeScript, JavaScript e
-          JS ES6.
+          <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, TypeScript, JavaScript ES6.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2" className="buttonSM">
