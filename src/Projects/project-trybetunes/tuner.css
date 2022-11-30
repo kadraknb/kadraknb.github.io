@@ -1,0 +1,37 @@
+#tunerBody {
+  min-height: 700px;
+  width: 100%;
+  background: #ecf7fc;
+  color: rgba(37, 37, 37, 0.815);
+}
+.T_box {
+  border-radius: 15px;
+  background: linear-gradient(145deg, #ffffff, #c7c7c7d8);
+  box-shadow:  15px 10px 20px #3f3f3fc7, -20px -20px 60px #ffffff;
+}
+.T_placeh::placeholder {  
+  color: rgba(136, 136, 136, 0.432);  
+}
+.T_boderStyle {
+  border-style: none;
+  border-color:rgb(255, 255, 255);
+}
+.T_boderStyle_input {
+  border-color:rgba(255, 255, 255, 0.445);
+}
+.T_boderStyle_input:active{
+  border-color:rgba(255, 255, 255, 0.445);
+}
+.T_IMG_album {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-right: 10px;
+}
+.T_album_nome {
+  font-family: 'Secular One', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+.T_nome_fino {
+  font-size: small;
+  color: #1414147a;
+}

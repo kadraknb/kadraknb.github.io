@@ -1,3 +1,16 @@
+.listProject {
+  position: relative;
+  overflow: none;
+  display: flex;
+  flex-direction:column;
+  right: 0;
+}
+
+.ulProj {
+  list-style: none;
+  padding: 0;
+}
+
 .projListTitle {
   color: #7af7fd;
   text-transform: uppercase;
@@ -5,15 +18,12 @@
   margin: 5px auto;
 }
 .h2Title {
+  position: relative;
   border: 1px solid rgb(0 217 255 / 23%);
   margin: 0;
-  padding-left: 20px;
+  padding-left: 10%;
   width: 200px;
 }
-/* .pLTitle:nth-child(1) {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
-} */
 .p-li-title {
   color: #03e8f4c5;
   font-size: large;
@@ -30,19 +40,7 @@
   background-color: #0000006e;
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
 }
-.listProject {
-  overflow: auto;
-  display: flex;
-  flex-direction:column;
-  height: 100vh;
-}
 
-.ulProj {
-  list-style: none;
-  padding: 0;
-  height: 90vh;
-  /* width: 200px; */
-}
 .imgLP {
   filter: drop-shadow(1px 1px 9px #03e9f4);
   margin-left: 17%;
@@ -59,6 +57,97 @@
   border: 0;
 }
 /* ///////projectDetalil//////// */
+.button {
+  background-color: #00000000;
+  position: relative;
+  display: inline-block;
+  padding: 25px 25px;
+  margin: 40px 0;
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+.button:hover {
+ background: #03e9f4;
+ color: #000000;
+ box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+ -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+.button span {
+  position: absolute;
+  display: block;
+}
+.button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#03e9f4);
+  animation: animatel 1s linear infinite;
+}
+@keyframes animatel {
+  0%{
+    left: -100%;
+  }
+  50%,100%{
+    left: 100%;
+  }
+}
+.button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0%{
+    top: -100%;
+  }
+  50%,100%{
+    top: 100%;
+  }
+}
+.button span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3 {
+  0%{
+    right: -100%;
+  }
+  50%,100%{
+    right: 100%;
+  }
+}
+.button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0%{
+    bottom: -100%;
+  }
+  50%,100%{
+    bottom: 100%;
+  }
+}
 .modal-content {
   color: #00f2ff;
   background-color: #000000;

@@ -16,8 +16,6 @@ function App () {
   return (
     <>
       <div className="profile-centerBody-flex">
-      <link rel="stylesheet" href="devicon.min.css"></link>
-
         <Profile />
         <div className="centerBody">
           {previewProject

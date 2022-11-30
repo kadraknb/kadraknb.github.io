@@ -15,7 +15,7 @@ function PreviewProject () {
   const handleClose = () => setModalShow(false)
 
   const Project = () => {
-    const Project = require('../../services/Projects')[previewProject]
+    const Project = require('../../Projects')[previewProject]
     return <Project />
   }
 

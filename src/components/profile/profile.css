@@ -20,7 +20,7 @@
   margin-top: 30px;
 }
 .contatos .list-group-item {
-  --bs-list-group-bg: #008b9f21;
+  --bs-list-group-bg: none;
   --bs-list-group-border-color: rgb(0 217 255 / 23%);
   box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
 }
@@ -43,10 +43,10 @@
   width: fit-content;
   height: fit-content;
   /* margin-top: 50px; */
-  background-color: #008b9f21;
-  border: 1px solid rgb(0 217 255 / 23%);
+  /* background-color: #008b9f21; */
+  /* border: 1px solid rgb(0 217 255 / 23%); */
   border-radius: 3px;
-  box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
+  /* box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329); */
 }
 
 .liIconTec{

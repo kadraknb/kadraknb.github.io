@@ -1,0 +1,49 @@
+/* /////////header//////// */
+#T_header {
+  padding: 10px 10px 20px ;
+  background: linear-gradient(145deg, #ffffff, #b1b1b1);
+  border-radius: 10px;
+  border-bottom: 3px solid rgb(172, 172, 172);
+  box-shadow:  10px 15px 20px #616161c7, -20px -20px 60px #ffffff;
+  margin-bottom: 30px;
+}
+.T_nav{
+  margin-right: 25px;
+  color: rgba(31, 31, 31, 0.753);
+  font-size: x-large;
+}
+.T_nav:hover {
+  background: linear-gradient(145deg, #00000054, #ffffff);
+  box-shadow:  20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+}
+/* //////////cardMusica/////////// */
+#T_play {
+  width: 300px;
+  height: 300px;
+}
+#T_box_img {
+  margin-left: 75px;
+  position: fixed;
+  margin-top: -50px;
+}
+#T_img_musi {
+  border-radius: 15px;
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0px 20px 15px #000000a8);
+
+}
+#espaco {
+  margin-top: 50px;
+}
+#T_box_icon {
+  padding-top: 150px;
+}
+.T_icon {
+  margin-left: 30px;
+
+}
+#T_Icon_play{
+  margin-left: 43px;
+  filter: drop-shadow(6px 6px 9px #000000d7);
+}

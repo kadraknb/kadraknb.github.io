@@ -13,7 +13,7 @@ function Profile () {
       <div>
         <h5 className="nomeP">Vagner Cardoso dos Santos</h5>
       </div>
-      <ListGroup className="contatos">
+      <ListGroup className="contatos sombra efeito-vidro">
         <ListGroup.Item>
           <img
             src={iconTec.tec.gitHub}
@@ -50,7 +50,7 @@ function Profile () {
           </a>
         </ListGroup.Item>
       </ListGroup>
-      <ul className="ulIconTec">
+      <ul className="ulIconTec sombra efeito-vidro">
         <h6 className='text-b-b'>Tecnologias e Ferramentas</h6>
         {Object.entries(iconTec.tec).map((technology) => (
           <li key={technology[0]} className="liIconTec">
