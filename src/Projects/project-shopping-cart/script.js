@@ -7,7 +7,6 @@ const mainList = document.querySelector('section.items')
 const cartItemsElements = document.querySelector('.cart__items')
 const totalPrice = document.querySelector('.total-price')
 
-
 // Criando função que adiciona texto "carregando" na página: //
 function addLoading () {
   if (mainList.innerHTML === '') {

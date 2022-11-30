@@ -27,7 +27,7 @@ class Header extends React.Component {
     const { name, carregando } = this.state
     return (
       <>
-      <header id='T_header' >
+      <header className='T_box' id='T_header' >
         {carregando
           ? (
           <Carregando />
@@ -35,7 +35,7 @@ class Header extends React.Component {
           : (
           <div>
             <h2>Olá {name}</h2>
-            <aside>
+            <aside id='T_box_nav'>
               <button className='T_box T_boderStyle T_nav' onClick={ () => setRouter('Search')}>search</button>
               <button className='T_box T_boderStyle T_nav' onClick={ () => setRouter('Favorites')}>Favorites</button>
               <button className='T_box T_boderStyle T_nav' onClick={ () => setRouter('Profile')}>Profile</button>

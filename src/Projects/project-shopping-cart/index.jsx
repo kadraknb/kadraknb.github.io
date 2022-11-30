@@ -3,7 +3,7 @@ import './style.css'
 
 function ShoppingCart () {
   useEffect(() => {
-      require('./script')
+    require('./script')
   }, [])
 
   return (

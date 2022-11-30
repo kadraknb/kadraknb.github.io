@@ -34,8 +34,23 @@
   margin-bottom: 30px;
 }
 /* /////////album////////// */
-#T_A {
-  padding-left: 7px;
-  margin: 0 15px 25px 15px;
-  width: 317px;
+#T_A .T_album_nome {
+  margin-left: 15px;
+}
+/* /////////perfil///////// */
+#T_Box_P {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#T_Box_P .T_box:hover {
+  background: linear-gradient(145deg, #71829e, #ffffff);
+  box-shadow:  20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+}
+/* ////////editi perfil ///////// */
+#T_box_PEdit_Form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

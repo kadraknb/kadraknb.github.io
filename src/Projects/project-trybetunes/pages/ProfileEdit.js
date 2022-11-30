@@ -63,9 +63,10 @@ class ProfileEdit extends React.Component {
           <Carregando />
             )
           : (
-          <form>
+          <form id='T_box_PEdit_Form'>
             <input
               placeholder="nome"
+              className='T_placeh T_boderStyle_input'
               type="text"
               value={name}
               name="name"
@@ -73,6 +74,7 @@ class ProfileEdit extends React.Component {
             />
             <input
               placeholder="email"
+              className='T_placeh T_boderStyle_input'
               type="email"
               value={email}
               name="email"
@@ -81,6 +83,7 @@ class ProfileEdit extends React.Component {
             />
             <input
               placeholder="description"
+              className='T_placeh T_boderStyle_input'
               type="text"
               value={description}
               name="description"
@@ -88,6 +91,7 @@ class ProfileEdit extends React.Component {
             />
             <input
               placeholder="UrlImage"
+              className='T_placeh T_boderStyle_input'
               type="text"
               value={image}
               name="image"

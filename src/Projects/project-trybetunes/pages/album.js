@@ -18,7 +18,6 @@ class Album extends React.Component {
       loading: true
     }
   }
-  // 81752079
 
   componentDidMount () {
     this.fechGetinfoAlbums()
@@ -26,8 +25,8 @@ class Album extends React.Component {
   }
 
   fechGetinfoAlbums = async () => {
-    // const { id } = this.props
-    const album = await getMusics(81752079)
+    const { id } = this.props
+    const album = await getMusics(id)
     this.setState({
       infoAlbum: album[0],
       album,
@@ -48,7 +47,7 @@ class Album extends React.Component {
     const { setRouter } = this.props
     const { infoAlbum, artistName, album, loading } = this.state
     return (
-      <div>
+      <>
         <Header setRouter={setRouter} />
         <div id='T_A'>
         <h1 className='T_album_nome'>{ artistName }</h1>
@@ -59,7 +58,7 @@ class Album extends React.Component {
           <MusicCard musicas={ album.slice(1) } funOnChange={ this.favoriteSongs } />
             ) }
         </div>
-      </div>
+      </>
     )
   }
 }

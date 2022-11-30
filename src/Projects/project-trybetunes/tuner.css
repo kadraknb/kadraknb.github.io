@@ -1,16 +1,17 @@
 #tunerBody {
   min-height: 700px;
-  width: 100%;
-  background: #ecf7fc;
-  color: rgba(37, 37, 37, 0.815);
+  width: 370px;
+  background: #f0f4f7;
+  color: #71829e;
 }
 .T_box {
+  color: #71829e;
   border-radius: 15px;
-  background: linear-gradient(145deg, #ffffff, #c7c7c7d8);
-  box-shadow:  15px 10px 20px #3f3f3fc7, -20px -20px 60px #ffffff;
+  background: #f0f4f7;
+  box-shadow:  15px 10px 20px #71829e, -20px -20px 60px #ffffff;
 }
 .T_placeh::placeholder {  
-  color: rgba(136, 136, 136, 0.432);  
+  color: #71829e;  
 }
 .T_boderStyle {
   border-style: none;

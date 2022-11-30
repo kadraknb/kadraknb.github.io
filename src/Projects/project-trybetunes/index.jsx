@@ -9,7 +9,7 @@ import Profile from './pages/profile'
 import ProfileEdit from './pages/ProfileEdit'
 
 function Trybetunes () {
-  const [router, setRouter] = useState('Album')
+  const [router, setRouter] = useState('Login')
   const [album, setAlbum] = useState(0)
 
   const routers = {

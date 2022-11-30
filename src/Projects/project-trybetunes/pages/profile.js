@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Carregando from '../components/caregando'
 import Header from '../components/Header'
 import { getUser } from '../services/userAPI'
+import imgP from '../../../images/T_imgPerfil.png'
 
 class Profile extends React.Component {
   constructor () {
@@ -18,14 +19,16 @@ class Profile extends React.Component {
 
   componentDidMount () {
     const { umaVez } = this.state
-    if (umaVez) { this.pegarId() }
+    if (umaVez) {
+      this.pegarId()
+    }
   }
 
   pegarId = async () => {
     const { user } = this.state
     if (!user) {
-      const sim = await getUser()
-      this.setState({ user: sim, loading: false, umaVez: false })
+      const user = await getUser()
+      this.setState({ user, loading: false, umaVez: false })
     }
   }
 
@@ -34,17 +37,19 @@ class Profile extends React.Component {
     const { setRouter } = this.props
 
     return (
-      <div>
+      <>
         <Header setRouter={setRouter} />
-        {loading && <Carregando />}
-        <h3>{user.name}</h3>
-        <h3>{user.email}</h3>
-        <img src={user.image} alt={user.name} />
-        <h5>{user.description}</h5>
-        <button type="button" onClick={() => setRouter('ProfileEdit')}>
-        Editar perfil
-        </button>
-      </div>
+        <div id="T_Box_P">
+          {loading && <Carregando />}
+          <h3>{user.name}</h3>
+          <h3>{user.email}</h3>
+          <img src={user.image || imgP} alt={user.name} />
+          <h5>{user.description}</h5>
+          <button className='T_box T_boderStyle' type="button" onClick={() => setRouter('ProfileEdit')}>
+            Editar perfil
+          </button>
+        </div>
+      </>
     )
   }
 }

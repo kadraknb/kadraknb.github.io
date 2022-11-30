@@ -6,7 +6,7 @@
   /* min-width: 310px; */
   /*  */
   overflow: auto;
-  /* width: 80vw; */
+  /* width: 100%; */
   max-height: 85vh;
 
 
@@ -19,8 +19,9 @@
 
 }
 .preP .modal-dialog {
-  width: 80vw;
+  width: min-content;
   --bs-modal-width: auto;
+  margin: auto;
   /* position: absolute; */
   /* left: 10%; */
 }

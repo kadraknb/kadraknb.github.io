@@ -1,0 +1,7 @@
+{favoritos[playAtual]
+  ? (
+  <img className="T_icon " src={icons.removF} />
+    )
+  : (
+  <img className="T_icon " src={icons.addF} onClick={ funOnChange(musicas[playAtual], true) } />
+    )}
