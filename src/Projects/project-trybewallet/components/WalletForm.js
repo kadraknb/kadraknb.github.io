@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import './components.css'
 
 import {
   currenciasAction,
@@ -164,20 +165,25 @@ class WalletForm extends Component {
     const { despesa, description, currency, method, tag, buttonEdit } = this.state
     const { store: { wallet: { currencies } } } = this.props
     return (
-      <form>
+      <form id='W_Form_WF'>
         <input
+          className='W_input_WF'
+          placeholder='valor'
           type="number"
           name="despesa"
           value={ despesa }
           onChange={ (ee) => this.change(ee) }
         />
         <input
+          className='W_input_WF'
+          placeholder='descrição'
           type="text"
           name="description"
           value={ description }
           onChange={ (ee) => this.change(ee) }
         />
         <select
+          className='W_select'
           name="currency"
           value={ currency }
           onChange={ (ee) => this.change(ee) }
@@ -187,6 +193,7 @@ class WalletForm extends Component {
           ))}
         </select>
         <select
+          className='W_select'
           name="method"
           value={ method }
           onChange={ (ee) => this.change(ee) }
@@ -196,6 +203,7 @@ class WalletForm extends Component {
           <option>Cartão de débito</option>
         </select>
         <select
+          className='W_select'
           name="tag"
           value={ tag }
           onChange={ (ee) => this.change(ee) }
@@ -207,6 +215,7 @@ class WalletForm extends Component {
           <option>Saúde</option>
         </select>
         <button
+          className='W_butoon'
           type="submit"
           onClick={ (aa) => {
             const button = buttonEdit ? this.submit(aa) : this.editTableSubmit(aa)

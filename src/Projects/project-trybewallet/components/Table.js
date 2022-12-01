@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { removExpensesAction } from '../redux/actions'
+import './components.css'
 
 class Table extends Component {
   removExpenses = (id) => {
@@ -10,65 +11,84 @@ class Table extends Component {
   }
 
   editExpenses = (id) => {
-    const { store: { wallet: { funEdit } } } = this.props
+    const {
+      store: {
+        wallet: { funEdit }
+      }
+    } = this.props
     funEdit(id)
   }
 
   render () {
-    const { store: { wallet: { expenses } } } = this.props
+    const {
+      store: {
+        wallet: { expenses }
+      }
+    } = this.props
+    const itensTH = [
+      'Descrição',
+      'Tipo',
+      'Método de pagamento',
+      'Valor',
+      'Câmbio utilizado',
+      'Moeda de conversão',
+      'Valor convertido',
+      'Editar/Excluir'
+    ]
     return (
-      <table>
+      <table id="W_table">
         <thead>
           <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            {itensTH.map((item, index) => (
+              <th key={index}>{item}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
           {expenses &&
             expenses.map((aa) => {
-              const ValorConvertido = Number(aa.exchangeRates[aa.currency].ask) *
-               Number(aa.value)
+              const ValorConvertido =
+                Number(aa.exchangeRates[aa.currency].ask) * Number(aa.value)
               return (
-                <tr key={ aa.id }>
+                <tr key={aa.id}>
                   <td>{aa.description}</td>
                   <td>{aa.tag}</td>
                   <td>{aa.method}</td>
                   <td>{Number(aa.value).toFixed(2)}</td>
-                  <td>{aa.exchangeRates[aa.currency].name}</td>
-                  <td>{aa.tag}</td>
+                  {/* <td>{aa.exchangeRates[aa.currency].name}</td> */}
+                  <td>{aa.currency}</td>
                   <td>
-                    {ValorConvertido.toFixed(2)}
+                    {Number(aa.exchangeRates[aa.currency].ask).toFixed(2)}
                   </td>
-                  <td>{Number(aa.exchangeRates[aa.currency].ask).toFixed(2)}</td>
+                  <td>R$ {ValorConvertido.toFixed(2)}</td>
                   <td>
                     <button
+                      className="W_butoon"
                       type="button"
-                      onClick={ () => this.editExpenses({
-                        id: aa.id,
-                        value: ValorConvertido
-                      }) }
+                      onClick={() =>
+                        this.editExpenses({
+                          id: aa.id,
+                          value: ValorConvertido
+                        })
+                      }
                     >
                       Editar
                     </button>
                     <button
+                      className="W_butoon"
                       type="button"
-                      onClick={ () => this.removExpenses({
-                        id: aa.id,
-                        value: ValorConvertido
-                      }) }
+                      onClick={() =>
+                        this.removExpenses({
+                          id: aa.id,
+                          value: ValorConvertido
+                        })
+                      }
                     >
                       Excluir
                     </button>
                   </td>
-                </tr>)
+                </tr>
+              )
             })}
         </tbody>
       </table>

@@ -1,26 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import './components.css'
 
 class Header extends Component {
-  // constructor() {
-  // super();
-
-  // this.state = {
-  //   total: 0,
-  // };
-  // }
-
   render () {
     const { store } = this.props
-    // const { total } = this.state;
     return (
-      <div>
-        <h4>{store.user.email}</h4>
+      <div id='W_Header_main'>
+        <h4>Olá {store.user.email}</h4>
         <div>
-          {store.wallet.totalBRL.toFixed(2)}
+        <p>BRL: {store.wallet.totalBRL.toFixed(2)}</p>
         </div>
-        <p>BRL</p>
       </div>
     )
   }

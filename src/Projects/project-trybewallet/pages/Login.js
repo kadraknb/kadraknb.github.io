@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
+import './pages.css'
 import { loginAction } from '../redux/actions'
 
 class Login extends React.Component {
@@ -9,51 +9,41 @@ class Login extends React.Component {
     super()
 
     this.state = {
-      email: '',
-      password: '',
-      disabled: true
+      nome: ''
     }
   }
 
-  disabled = () => {
-    const N5 = 5
-    const { email, password } = this.state
-    const valido = /\S+@\S+\.\S+/.test(email) && password.length > N5
-    // !
-    this.setState({ disabled: !valido })
-  }
-
   change = (aa) => {
-    const { value, type } = aa.target
-    this.setState({ [type]: value }, () => this.disabled())
+    const { value, name } = aa.target
+    this.setState({ [name]: value })
   }
 
   submit = () => {
-    const { email } = this.state
+    const { nome } = this.state
     const { router, dispatch } = this.props
-    dispatch(loginAction(email))
+    dispatch(loginAction(nome))
     router('Wallet')
   }
 
   render () {
-    const { email, password } = this.state
+    const { nome } = this.state
     return (
-      <form>
-        <input
-          type="email"
-          autoComplete="email"
-          value={ email }
-          onChange={ (e) => this.change(e) }
-        />
-        <input
-          type="password"
-          value={ password }
-          onChange={ (e) => this.change(e) }
-        />
-        <button type="submit" disabled={ false } onClick={ this.submit }>
-          Entrar
-        </button>
-      </form>
+      <div >
+        <div id='W_login'></div>
+        <form id="W_form_login">
+          <input
+            className='W_F_input'
+            name='nome'
+            type="text"
+            placeholder="Seu nome"
+            value={nome}
+            onChange={(e) => this.change(e)}
+          />
+          <button id='W_Bt_login' type="submit" disabled={!nome.length > 2} onClick={this.submit}>
+            Entrar
+          </button>
+        </form>
+      </div>
     )
   }
 }
