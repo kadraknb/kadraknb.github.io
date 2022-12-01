@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import Context from '../../context/Context'
 
 import ProjectDetail from './projectDetail'
 import projectList from '../../services/getProjectList'
 
 function ProjectList () {
-  const [selectedProject, setSelectedProject] = useState('')
-  const [show, setShow] = useState(false)
+  const [selectedProject, setSelectedProject] = useState(1)
+  const { showDetalhe, setShowDetalhe } = useContext(Context)
 
   return (
     <div className="listProject ">
@@ -18,7 +19,7 @@ function ProjectList () {
             className="liProj hover-proj efeito-vidro sombra "
             onClick={() => {
               setSelectedProject(index)
-              setShow(!show)
+              !showDetalhe && setShowDetalhe(!showDetalhe)
             }}
           >
             <img
@@ -28,7 +29,7 @@ function ProjectList () {
             />
             <p className="projListTitle p-li-title">{project.name}<hr className="p-li-hr" /></p>
             {selectedProject === index && (
-              <ProjectDetail show={show} setShow={setShow} project={project} />
+              <ProjectDetail setSelectedProject={setSelectedProject} project={project} />
             )}
           </li>
         ))}

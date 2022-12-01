@@ -5,12 +5,10 @@
   flex-direction:column;
   right: 0;
 }
-
 .ulProj {
   list-style: none;
   padding: 0;
 }
-
 .projListTitle {
   color: #7af7fd;
   text-transform: uppercase;
@@ -34,36 +32,32 @@
 .p-li-hr {
   margin-top: 0;
 }
-
 .hover-proj:hover {
-  /* color: #000000; */
   background-color: #0000006e;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+  box-shadow: 0 0 5px  var(--azul-base), 0 0 25px  var(--azul-base), 0 0 50px  var(--azul-base), 0 0 200px  var(--azul-base);
 }
-
 .imgLP {
-  filter: drop-shadow(1px 1px 9px #03e9f4);
+  filter: drop-shadow(1px 1px 9px  var(--azul-base));
   margin-left: 17%;
   margin-top: 5px;
   width: 130px;
   height: 130px;
 }
 .liProj {
-  /* width: max-content; */
   border: 1px solid rgb(0 217 255 / 23%);
   width: 200px;
 }
 .liProj:last-child {
   border: 0;
 }
-/* ///////projectDetalil//////// */
+/* ///////project detail//////// */
 .button {
   background-color: #00000000;
   position: relative;
   display: inline-block;
   padding: 25px 25px;
   margin: 40px 0;
-  color: #03e9f4;
+  color:  var(--azul-base);
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -72,9 +66,9 @@
   margin-right: 50px;
 }
 .button:hover {
- background: #03e9f4;
+ background:  var(--azul-base);
  color: #000000;
- box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+ box-shadow: 0 0 5px  var(--azul-base), 0 0 25px  var(--azul-base), 0 0 50px  var(--azul-base), 0 0 200px  var(--azul-base);
  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 .button span {
@@ -86,7 +80,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg,transparent,#03e9f4);
+  background: linear-gradient(90deg,transparent ,var(--azul-base));
   animation: animatel 1s linear infinite;
 }
 @keyframes animatel {
@@ -102,7 +96,7 @@
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg,transparent,#03e9f4);
+  background: linear-gradient(180deg,transparent ,var(--azul-base));
   animation: animate2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -119,7 +113,7 @@
   right: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg,transparent,#03e9f4);
+  background: linear-gradient(270deg,transparent ,var(--azul-base));
   animation: animate3 1s linear infinite;
   animation-delay: 0.50s;
 }
@@ -136,7 +130,7 @@
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg,transparent,#03e9f4);
+  background: linear-gradient(360deg,transparent ,var(--azul-base));
   animation: animate4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -151,23 +145,23 @@
 .modal-content {
   color: #00f2ff;
   background-color: #000000;
-  box-shadow: 0 0 5px #03e9f4, 0 0 2px #03e9f4, 0 0 5px #03e9f4,
-    0 0 2px #03e9f4;
+  box-shadow: 0 0 5px  var(--azul-base), 0 0 2px  var(--azul-base), 0 0 5px  var(--azul-base),
+    0 0 2px  var(--azul-base);
 }
-.modalHeader{
+#modalHeader{
   padding-bottom: 0;
 }
-.modalTitle {
+#modalTitle {
   margin: 0;
   padding: 0;
   height: 33.33px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 .btn-close {
-  margin: 0;
-  position: 0;
-  margin-bottom: 8px;
-  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(100);
+  /* margin: 0; */
+  /* position: 0; */
+  /* margin-bottom: 8px; */
+  filter: drop-shadow(1px 1px 9px  var(--azul-base)) brightness(100);
 }
 .Modal-hr {
   margin: 0;
@@ -189,7 +183,7 @@
   margin: 10px;
 }
 .divButton {
-  height: fit-content;;
+  height: fit-content;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
@@ -199,11 +193,23 @@
   margin: auto ;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(1);
+  filter: drop-shadow(1px 1px 9px  var(--azul-base)) brightness(1);
   margin-bottom: 20px;
 }
-
 .margin-description {
   margin-top: 5px;
   margin-left: 33px;
+}
+/* /////tabs///////// */
+#ProjDet_tabs .nav-link.active {
+  color: var(--azul-base);
+  background-color: #000000;
+  border: 2px solid var(--azul-base) ;
+  filter: drop-shadow(1px 1px 9px  var(--azul-base)) ;
+  
+}
+#ProjDet_tabs .nav-link {
+  color: var(--azul-base);
+  background-color: #000000;
+  border: 2px solid #00666b ;
 }

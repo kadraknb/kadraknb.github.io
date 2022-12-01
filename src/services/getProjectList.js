@@ -47,12 +47,12 @@ const projectList = [
     habilidadeFocada: [
       'Criar um store Redux em aplicações React.',
       'Criar reducers no Redux em aplicações React.',
-      'Criar actions no Redux em aplicações Reacttryunfo.',
+      'Criar actions no Redux em aplicações React.',
       'Criar dispatchers no Redux em aplicações React.',
       'Conectar Redux aos componentes React.',
       'Criar actions assíncronas na sua aplicação React que faz uso de Redux.'
     ],
-    description: `Neste projeto esta desenvolvido uma carteira de controle de gastos com conversor de moedas,
+    description: `Neste projeto foi desenvolvido uma aplicação de controle de gastos com conversor de moedas,
      ao utilizar essa aplicação um usuário deverá ser capaz de:
       Adicionar, remover e editar um gasto,
       Visualizar uma tabelas com seus gastos,
@@ -78,9 +78,9 @@ const projectList = [
       'Criar links de navegação na aplicação com o componente Link.'
     ],
     description:
-      `Neste projeto foi criado o TrybeTunes,
+      `Neste projeto foi criado o Tunes,
       uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, 
-      criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.`
+      criar uma lista de músicas favoritas e editar o perfil da pessoa usuária.`
   },
   {
     id: 'ShoppingCart',
