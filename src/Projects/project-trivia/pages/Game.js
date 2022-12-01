@@ -162,7 +162,7 @@ class Game extends React.Component {
           <p
             className="fs-2 mb-5"
           >
-            {game[perguntaN].question}
+            {game[perguntaN].question.replace(/(&quot;)/g, '"').replace(/(&#039;)/g, '"')}
           </p>
           <ol className="p-0">
             {this.answer()}

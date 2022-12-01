@@ -4,7 +4,7 @@ import { node } from 'prop-types'
 import Context from './Context'
 
 function Provider ({ children }) {
-  const [previewProject, setPreviewProject] = useState('Wallet')
+  const [previewProject, setPreviewProject] = useState('Trivia')
   const [modalShow, setModalShow] = useState(true)
   const value = { previewProject, setPreviewProject, modalShow, setModalShow }
 
