@@ -5,7 +5,7 @@ import ProjectDetail from './projectDetail'
 import projectList from '../../services/getProjectList'
 
 function ProjectList () {
-  const [selectedProject, setSelectedProject] = useState(1)
+  const [selectedProject, setSelectedProject] = useState()
   const { showDetalhe, setShowDetalhe } = useContext(Context)
 
   return (

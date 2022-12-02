@@ -11,8 +11,6 @@ function ProjectDetail ({ project }) {
   const { setPreviewProject, setModalShow, showDetalhe, setShowDetalhe } =
     useContext(Context)
 
-  // const [key, setKey] = useState('desenvolvido')
-
   const handleClose = () => setShowDetalhe(false)
 
   const {

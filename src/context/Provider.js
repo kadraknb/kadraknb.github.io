@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { node } from 'prop-types'
 
 import Context from './Context'
@@ -16,6 +16,7 @@ function Provider ({ children }) {
     showDetalhe,
     setShowDetalhe
   }
+  useEffect(() => console.log(previewProject), [])
 
   return <Context.Provider value={value}>{children}</Context.Provider>
 }
