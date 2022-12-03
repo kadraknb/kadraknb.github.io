@@ -31,8 +31,7 @@ function Centerbory () {
           Node.js com MySQL2, Docker e Docker-compose,Testes com Mocha, Chai,
           Sinon e Chai HTTP. <br />
           <br />
-          <strong>Soft Skills</strong>: Metodologias ágeis e habilidades
-          comportamentais. <br />
+          <strong>Soft Skills</strong>: Metodologias ágeis: Scrum, Kanban. <br />
           <br />
           <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, TypeScript, JavaScript ES6.
         </Accordion.Body>

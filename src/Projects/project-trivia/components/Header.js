@@ -47,13 +47,13 @@ class Header extends React.Component {
 
 const mapStateToProps = (state) => ({
   gravatarEmail: state.player.gravatarEmail,
-  score: state.player.score,
+  score: state.player.score || 0,
   name: state.player.name
 })
 
 Header.propTypes = {
   gravatarEmail: propTypes.string.isRequired,
-  score: propTypes.string.isRequired,
+  score: propTypes.number.isRequired,
   name: propTypes.string.isRequired,
   dispatch: propTypes.func.isRequired
 }

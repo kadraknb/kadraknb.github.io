@@ -25,7 +25,6 @@ function PreviewProject () {
     <div className='preP'>
       <Modal
         className='preP maxH'
-        unmountOnExit
         show={modalShow}
         onHide={handleClose}
         backdrop="static"

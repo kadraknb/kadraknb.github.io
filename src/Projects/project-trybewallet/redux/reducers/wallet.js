@@ -22,8 +22,6 @@ function wallet (state = INITIAL_STATE, action) {
         currencies: [...state.currencies, ...action.payload]
       }
     case GET_EXPENSES:
-      console.log(state.expenses)
-      console.log(action.payload)
       return {
         ...state,
         expenses: [...state.expenses, ...action.payload]

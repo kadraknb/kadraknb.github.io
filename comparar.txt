@@ -1,7 +1,35 @@
-{favoritos[playAtual]
-  ? (
-  <img className="T_icon " src={icons.removF} />
-    )
-  : (
-  <img className="T_icon " src={icons.addF} onClick={ funOnChange(musicas[playAtual], true) } />
-    )}
+Pe a CCL Ge
+COSC At yea
+Pa
+Pete oe
+Ere @
+Pee Ee se
+pass: "123456abc"
+
+ 
+
+iy
+ns
+
+Pacis aca pecU crak
+
+SF Cee IR gS
+
+RPM -u Cree
+
+subject: "Oi, sou o victor e estou trabalhando com o nodemailer",
+
+Dor a CP TRG Cac BELA eT ORC ua Lee
+
+TOC Rane tac UPC aE a RC MEM nas Sear ee ada ae Cure eee cece
+}).then(message => {
+
+Cee ceer
+}).catch(err => {
+
+console.log(err);
+
+ 
+
+»
+

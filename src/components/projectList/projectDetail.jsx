@@ -31,7 +31,6 @@ function ProjectDetail ({ project }) {
         keyboard
         enforceFocus
         animation
-        unmountOnExit
         show={showDetalhe}
         className="modalPD"
         backdrop="static"
@@ -140,7 +139,7 @@ ProjectDetail.propTypes = {
     habilidadeFocada: PropTypes.arrayOf(PropTypes.string),
     listTec: PropTypes.arrayOf(PropTypes.string)
   }).isRequired,
-  showP: PropTypes.bool.isRequired,
+  // showP: PropTypes.bool.isRequired,
   setSelectedProject: PropTypes.func.isRequired
 }
 

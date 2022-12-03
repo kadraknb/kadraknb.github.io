@@ -90,7 +90,7 @@ class Game extends React.Component {
         key="true"
         type="button"
         name="correctAnswer"
-        id={ turnFinished && 'correctAnswer' }
+        id={ turnFinished ? 'correctAnswer' : '' }
         onClick={ this.handleAnswer }
         disabled={ turnFinished }
       >
@@ -99,7 +99,7 @@ class Game extends React.Component {
     const answerFalse = (game[perguntaN].incorrect_answers.map((aa, ii) => (
       <button
         className="btn btn-light mx-1"
-        id={ turnFinished && 'incorrectAnswer' }
+        id={ turnFinished ? 'incorrectAnswer' : '' }
         key={ ii }
         type="button"
         onClick={ this.handleAnswer }
@@ -115,7 +115,7 @@ class Game extends React.Component {
   handleTimer = ({ seconds }) => (
     <span
       id="timer"
-      className={ seconds <= minTimer && 'text-danger' }
+      className={ seconds <= minTimer ? 'text-danger' : '' }
     >
       {seconds}
     </span>

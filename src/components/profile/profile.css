@@ -1,39 +1,67 @@
+/* //////////////perfil */
 .imgProfile {
   width: 253px;
   height: 250px;
   margin-bottom: 20px;
 }
 .nomeP{
-  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
+  filter: var(--drop-shadow-9px) brightness(20);
   border-bottom: 1px solid #00909785;
 
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 146, 243, 0.178));
 }
+/* contato/////////// */
 .imgC {
   width: 80px;
   height: 80px;
-  filter: drop-shadow(1px 1px 9px #03e9f4) brightness(20);
+  filter: var(--drop-shadow-9px) brightness(20);
 }
 .contatos {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  border-radius: 0;
 }
 .contatos .list-group-item {
   --bs-list-group-bg: none;
   --bs-list-group-border-color: rgb(0 217 255 / 23%);
-  box-shadow: 0 4px 10px rgba(7, 237, 253, 0.329);
 }
 .Clink {
-  margin-left: 9PX;
+  margin-left:  9px ;
   color: aqua;
   font-size: larger;
+}
+#Perf_box_email {
+  margin: 0 10px;
+}
+.emailCopy {
+  display: flex;
+  
+}
+.Perf_email {
+  color: var(--azul-base);
+  /* font-size: 20px; */
+  margin-bottom: 0;
+  /* margin-left: 10px; */
+  /* padding: 0; */
+  margin: 0 auto;
+
+}
+.Copying {
+  cursor: copy;
+  color: rgb(0, 255, 255);
+  margin-left: 5px;
+}
+.Clink:hover, .Copying:hover {
+  color: aqua;
 }
 .profile {
   width: 280px;
   height: 100vh;
 }
+/* icon tecs///////////// */
 .ulIconTec{
+  position: fixed;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -51,14 +79,14 @@
 .imgTec{
   width: 50px;
   height: 50px;
-  filter: drop-shadow(2px 2px 9px #03e9f4) brightness(20);
+  filter: var(--drop-shadow-9px) brightness(20);
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0006);
 }
 .Perfil_imgTec_brilho {
   filter: drop-shadow(2px 2px 9px #000000) brightness(1);
 }
 .fade.show.popover.bs-popover-end {
-  filter: drop-shadow(2px 2px 9px #03e9f4);
+  filter: var(--drop-shadow-9px);
 }
 .popover-arrow {
   margin-top: -25px;
@@ -78,7 +106,9 @@
   border-top: 0;
   color: var(--azul-base);
 }
-.tooltip-arrow {
+.popover.tooltip-arrow {
   margin-top: -25px;
 }
-  
+.fade.show.tooltip.bs-tooltip-end {
+  position: fixed;
+}

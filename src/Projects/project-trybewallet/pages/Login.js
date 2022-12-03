@@ -39,7 +39,7 @@ class Login extends React.Component {
             value={nome}
             onChange={(e) => this.change(e)}
           />
-          <button id='W_Bt_login' type="submit" disabled={!nome.length > 2} onClick={this.submit}>
+          <button id='W_Bt_login' type="button" disabled={!nome.length > 2} onClick={this.submit}>
             Entrar
           </button>
         </form>

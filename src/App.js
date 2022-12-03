@@ -11,7 +11,7 @@ import Context from './context/Context'
 function App () {
   const { previewProject } = useContext(Context)
   return (
-    <>
+    <div id='Body_All'>
       <div className="profile-centerBody-flex">
         {!previewProject && <Profile /> }
         <div className="centerBody">
@@ -25,7 +25,7 @@ function App () {
         </div>
         {!previewProject && <ProjectList /> }
       </div>
-    </>
+    </div>
   )
 }
 // "homepage": "https://kadraknb.github.io/kadraknb.github.io",

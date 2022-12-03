@@ -21,15 +21,14 @@ class MusicCard extends React.Component {
     this.getFavorite()
   }
 
-  getFavorite = () => {
+  getFavorite = async () => {
     const { musicas } = this.props
-    this.setState({ loading: true }, async () => {
-      const addFavori = await getFavoriteSongs()
-      const favoritos = musicas.map((bb) =>
-        addFavori.some((cc) => cc.trackId === bb.trackId)
-      )
-      this.setState({ favoritos, loading: false })
-    })
+
+    const addFavori = await getFavoriteSongs()
+    const favoritos = musicas.map((bb) =>
+      addFavori.some((cc) => cc.trackId === bb.trackId)
+    )
+    this.setState({ favoritos, loading: false })
   }
 
   play = (ii) => {
@@ -52,86 +51,99 @@ class MusicCard extends React.Component {
           <Carregando />
             )
           : (
-          <div id='T_box_all_play'>
+          <div id="T_box_all_play">
             <div id="espaco"></div>
-            <div id="T_box_img">
-              <img id="T_img_musi" src={musicas[playAtual].artworkUrl100} />
-            </div>
-            <div id="T_play" className="">
-              <div id="T_box_icon">
-                <audio id="T_audio" src={musicas[playAtual].previewUrl} />
-                <img
-                  className="T_icon"
-                  src={favoritos[playAtual] ? icons.removF : icons.addF}
-                  onClick={() =>
-                    funOnChange(musicas[playAtual], !favoritos[playAtual])
-                  }
-                />
-                <img
-                  className="T_icon "
-                  src={icons.prev}
-                  onClick={() => {
-                    this.setState({
-                      playAtual: playAtual ? playAtual - 1 : 0,
-                      onPlay: false
-                    })
-                  }}
-                />
-                <img
-                  className="T_icon "
-                  src={icons.next}
-                  onClick={() => {
-                    this.setState({ playAtual: playAtual + 1, onPlay: false })
-                  }}
-                />
-                {onPlay
-                  ? (
+            {musicas[0] && (
+              <>
+                <div id="T_box_img">
                   <img
-                    id="T_Icon_play"
-                    src={icons.pause}
-                    onClick={() => this.pause()}
+                    id="T_img_musi"
+                    src={
+                      musicas[playAtual].artworkUrl100 &&
+                      musicas[playAtual].artworkUrl100
+                    }
                   />
-                    )
-                  : (
-                  <img
-                    id="T_Icon_play"
-                    src={icons.play}
-                    onClick={() => this.play(playAtual)}
-                  />
-                    )}
-                <input
-                  defaultValue={100}
-                  id="T_volume"
-                  type={'range'}
-                  onChange={(e) => {
-                    document.getElementById('T_audio').volume =
-                      e.target.value / 100
-                  }}
-                />
-                <p id="T_album_nome_id" className="T_album_nome">
-                  {musicas[playAtual].trackName}
-                </p>
-              </div>
-            </div>
-            <ul id="T_Box_allmusi">
-              {musicas.map((aa, ii) => (
-                <li id="T_LI_mucas" className="T_box " key={aa.trackId}>
-                  <img
-                    id="T_Icon_play2"
-                    src={icons.play}
-                    onClick={() => {
-                      this.play(ii)
-                    }}
-                  />
-                  <p>{aa.trackName}</p>
-                  <img
-                    className="T_icon "
-                    src={favoritos[ii] ? icons.removF : icons.addF}
-                    onClick={() => funOnChange(aa, !favoritos[ii])}
-                  />
-                </li>
-              ))}
-            </ul>
+                </div>
+                <div id="T_play" className="">
+                  <div id="T_box_icon">
+                    <audio id="T_audio" src={musicas[playAtual].previewUrl} />
+                    <img
+                      className="T_icon"
+                      src={favoritos[playAtual] ? icons.removF : icons.addF}
+                      onClick={() =>
+                        funOnChange(musicas[playAtual], !favoritos[playAtual])
+                      }
+                    />
+                    <img
+                      className="T_icon "
+                      src={icons.prev}
+                      onClick={() => {
+                        this.setState({
+                          playAtual: playAtual ? playAtual - 1 : 0,
+                          onPlay: false
+                        })
+                      }}
+                    />
+                    <img
+                      className="T_icon "
+                      src={icons.next}
+                      onClick={() => {
+                        this.setState({
+                          playAtual: playAtual + 1,
+                          onPlay: false
+                        })
+                      }}
+                    />
+                    {onPlay
+                      ? (
+                      <img
+                        id="T_Icon_play"
+                        src={icons.pause}
+                        onClick={() => this.pause()}
+                      />
+                        )
+                      : (
+                      <img
+                        id="T_Icon_play"
+                        src={icons.play}
+                        onClick={() => this.play(playAtual)}
+                      />
+                        )}
+                    <input
+                      defaultValue={100}
+                      id="T_volume"
+                      type={'range'}
+                      onChange={(e) => {
+                        document.getElementById('T_audio').volume =
+                          e.target.value / 100
+                      }}
+                    />
+                    <p id="T_album_nome_id" className="T_album_nome">
+                      {musicas[playAtual].trackName}
+                    </p>
+                  </div>
+                </div>
+                <ul id="T_Box_allmusi">
+                  {musicas.map((aa, ii) => (
+                    <li id="T_LI_mucas" className="T_box " key={aa.trackId}>
+                      <img
+                        id="T_Icon_play2"
+                        src={icons.play}
+                        onClick={() => {
+                          this.play(ii)
+                        }}
+                      />
+                      <p>{aa.trackName}</p>
+                      <img
+                        className="T_icon "
+                        src={favoritos[ii] ? icons.removF : icons.addF}
+                        onClick={() => funOnChange(aa, !favoritos[ii])}
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
             )}
       </>

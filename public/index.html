@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="./favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="./style.css">
 
   </head>
-  <body>
+  <body >
     <div id="BG_body">
       <canvas id="webgl-canvas"></canvas>
       <script id="js-vertex-shader" type="x-shader/x-vertex">
       attribute vec3 position;
+
       void main()	{
         gl_Position = vec4(position, 1.0);
       }
@@ -48,8 +42,6 @@
       }
       </script>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js'></script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js'></script>
       <script  src="./script.js"></script>
       </div>
     <div id="root"></div>

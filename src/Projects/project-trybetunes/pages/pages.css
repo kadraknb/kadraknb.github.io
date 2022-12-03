@@ -27,8 +27,12 @@
   list-style: none;
   display: flex;
   width: 300px;
+  /* padding-bottom: 20px; */
   margin-bottom: 20px;
   box-shadow:  15px 10px 20px #3f3f3fc7;
+}
+#T_S_li:last-child {
+  margin-bottom: -25px;
 }
 #T_S_H3_resel {
   margin-bottom: 30px;
