@@ -21,7 +21,7 @@ const projectList = [
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'Redux, Redux-thunk',
-    listTec: ['react', 'redux', 'js', 'css'],
+    listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub', 'Trello'],
     preview: true,
     projectGroup: true,
     repository: 'https://github.com/kadraknb/Project-trivia',
@@ -40,7 +40,7 @@ const projectList = [
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'react-redux',
-    listTec: ['react', 'redux'],
+    listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
     repository: '',
@@ -64,7 +64,7 @@ const projectList = [
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'React Router',
-    listTec: ['React', 'js', 'DOM', 'Router'],
+    listTec: ['React', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
     repository: 'https://github.com/kadraknb/trybetunes',
@@ -77,8 +77,7 @@ const projectList = [
       'Utilizar o Switch do React Router.',
       'Criar links de navegação na aplicação com o componente Link.'
     ],
-    description:
-      `Neste projeto foi criado o Tunes,
+    description: `Neste projeto foi criado o Tunes,
       uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, 
       criar uma lista de músicas favoritas e editar o perfil da pessoa usuária.`
   },
@@ -88,7 +87,7 @@ const projectList = [
     icon: iconDOM,
     gif: gifDOM,
     tecFocus: 'JavaScript.DOM',
-    listTec: ['DOM', 'js'],
+    listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
     repository: 'https://github.com/kadraknb/shopping-cart',
@@ -104,12 +103,15 @@ const projectList = [
     name: 'pixels art',
     icon: iconDOM,
     gif: gifDOM,
-    tecFocus: 'DOM',
-    listTec: ['html', 'js', 'DOM'],
+    tecFocus: 'JavaScript.DOM',
+    listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
     repository: 'https://github.com/kadraknb/pixels-art',
-    habilidadeFocada: ['Criar elementos usando JS.DOM', 'Criar eventos no elementos usando JS.DOM'],
+    habilidadeFocada: [
+      'Criar elementos usando JS.DOM',
+      'Criar eventos no elementos usando JS.DOM'
+    ],
     description:
       'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
   }

@@ -1,13 +1,23 @@
 .listProject {
   position: relative;
-  overflow: none;
-  display: flex;
-  flex-direction:column;
-  right: 0;
+  overflow-y: scroll;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* right: 0; */
+  margin-left: -200px;
+  padding-left: 200px;
 }
+
+
 .ulProj {
   list-style: none;
   padding: 0;
+}
+.liProj {
+  width: 200px;
+  color: var(--azul-base);
+  box-shadow: -3px -1px 9px var(--azul-base);
+  
 }
 .projListTitle {
   color: #7af7fd;
@@ -15,41 +25,73 @@
   width: max-content;
   margin: 5px auto;
 }
+
 .h2Title {
-  position: relative;
+  /* position: relative; */
   border: 1px solid rgb(0 217 255 / 23%);
   margin: 0;
   padding-left: 10%;
   width: 200px;
 }
+/* 
 .p-li-title {
   color: #03e8f4c5;
   font-size: large;
   font-weight: bold;
   margin-bottom: 0;
-  
+
 }
+
 .p-li-hr {
   margin-top: 0;
-}
+} */
+
 .hover-proj:hover {
-  background-color: #0000006e;
-  box-shadow: 0 0 5px  var(--azul-base), 0 0 25px  var(--azul-base), 0 0 50px  var(--azul-base), 0 0 200px  var(--azul-base);
+  background-color: #000000b2;
+  box-shadow: 0 0 5px var(--azul-base), 0 0 25px var(--azul-base), 0 0 50px var(--azul-base), 0 0 200px var(--azul-base);
 }
+
 .imgLP {
-  filter: drop-shadow(1px 1px 9px  var(--azul-base));
+  filter: drop-shadow(1px 1px 9px var(--azul-base));
   margin-left: 17%;
   margin-top: 5px;
   width: 130px;
   height: 130px;
 }
-.liProj {
-  border: 1px solid rgb(0 217 255 / 23%);
-  width: 200px;
+.ProjList_li_nome{
+  /* border-bottom: solid 1px #03e8f469; */
+  /* border-radius: -10px; */
 }
+.ProjList_li_txt {
+  /* background: #00000060; */
+  /* filter: drop-shadow(1px 1px 3px #ffffff) ; */
+  box-shadow: -1px -1px 3px var(--azul-base);
+  border-top: solid 1px #03e8f469;
+  border-right: solid 1px #03e8f41f;
+  border-left: solid 1px #03e8f41f;
+  border-bottom: solid 1px #03e8f41f;
+  border-radius: 5px;
+  padding-left: 3px;
+}
+.ProjList_li_BT {
+  background-color: #03e8f43b;
+  border: 0;
+}
+.ProjList_li_BT {
+  color: #99faff9a;
+  background-color: #03636842;
+  border: 0;
+  border-radius: 5px;
+}
+
 .liProj:last-child {
   border: 0;
 }
+.ListP_IconFoco {
+  box-shadow: -5px 5px 10px #03e9f4
+}
+
+
 /* ///////project detail//////// */
 .button {
   background-color: #00000000;
@@ -57,7 +99,7 @@
   display: inline-block;
   padding: 25px 25px;
   margin: 40px 0;
-  color:  var(--azul-base);
+  color: var(--azul-base);
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.5s;
@@ -65,151 +107,183 @@
   overflow: hidden;
   margin-right: 50px;
 }
+
 .button:hover {
- background:  var(--azul-base);
- color: #000000;
- box-shadow: 0 0 5px  var(--azul-base), 0 0 25px  var(--azul-base), 0 0 50px  var(--azul-base), 0 0 200px  var(--azul-base);
- -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  background: var(--azul-base);
+  color: #000000;
+  box-shadow: 0 0 5px var(--azul-base), 0 0 25px var(--azul-base), 0 0 50px var(--azul-base), 0 0 200px var(--azul-base);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
+
 .button span {
   position: absolute;
   display: block;
 }
+
 .button span:nth-child(1) {
   top: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg,transparent ,var(--azul-base));
+  background: linear-gradient(90deg, transparent, var(--azul-base));
   animation: animatel 1s linear infinite;
 }
+
 @keyframes animatel {
-  0%{
+  0% {
     left: -100%;
   }
-  50%,100%{
+
+  50%,
+  100% {
     left: 100%;
   }
 }
+
 .button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(180deg,transparent ,var(--azul-base));
+  background: linear-gradient(180deg, transparent, var(--azul-base));
   animation: animate2 1s linear infinite;
   animation-delay: 0.25s;
 }
+
 @keyframes animate2 {
-  0%{
+  0% {
     top: -100%;
   }
-  50%,100%{
+
+  50%,
+  100% {
     top: 100%;
   }
 }
+
 .button span:nth-child(3) {
   bottom: 0;
   right: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(270deg,transparent ,var(--azul-base));
+  background: linear-gradient(270deg, transparent, var(--azul-base));
   animation: animate3 1s linear infinite;
   animation-delay: 0.50s;
 }
+
 @keyframes animate3 {
-  0%{
+  0% {
     right: -100%;
   }
-  50%,100%{
+
+  50%,
+  100% {
     right: 100%;
   }
 }
+
 .button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
-  background: linear-gradient(360deg,transparent ,var(--azul-base));
+  background: linear-gradient(360deg, transparent, var(--azul-base));
   animation: animate4 1s linear infinite;
   animation-delay: 0.75s;
 }
+
 @keyframes animate4 {
-  0%{
+  0% {
     bottom: -100%;
   }
-  50%,100%{
+
+  50%,
+  100% {
     bottom: 100%;
   }
 }
+
 .modal-content {
   color: #00f2ff;
   background-color: #000000;
-  box-shadow: 0 0 5px  var(--azul-base), 0 0 2px  var(--azul-base), 0 0 5px  var(--azul-base),
-    0 0 2px  var(--azul-base);
+  box-shadow: 0 0 5px var(--azul-base), 0 0 2px var(--azul-base), 0 0 5px var(--azul-base),
+    0 0 2px var(--azul-base);
 }
-#modalHeader{
+
+#modalHeader {
   padding-bottom: 0;
 }
+
 #modalTitle {
   margin: 0;
   padding: 0;
   height: 33.33px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
+
 .btn-close {
   /* margin: 0; */
   /* position: 0; */
   /* margin-bottom: 8px; */
-  filter: drop-shadow(1px 1px 9px  var(--azul-base)) brightness(100);
+  filter: drop-shadow(1px 1px 9px var(--azul-base)) brightness(100);
 }
+
 .Modal-hr {
   margin: 0;
   padding: -10px;
   top: 20%;
 
 }
+
 .modal {
   --bs-modal-header-border-color: #59920e:
 }
+
 .modal-footer {
-  border-top:#000000;
+  border-top: #000000;
 }
+
 .modalButton {
   margin: 0;
   margin-bottom: 25px;
 }
-.ModalSeparar{
+
+.ModalSeparar {
   margin: 10px;
 }
+
 .divButton {
   height: fit-content;
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
+
 .modalImg {
   border-radius: 50px;
-  margin: auto ;
+  margin: auto;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(1px 1px 9px  var(--azul-base)) brightness(1);
+  filter: drop-shadow(1px 1px 9px var(--azul-base)) brightness(1);
   margin-bottom: 20px;
 }
+
 .margin-description {
   margin-top: 5px;
   margin-left: 33px;
 }
+
 /* /////tabs///////// */
 #ProjDet_tabs .nav-link.active {
   color: var(--azul-base);
   background-color: #000000;
-  border: 2px solid var(--azul-base) ;
-  filter: drop-shadow(1px 1px 9px  var(--azul-base)) ;
-  
+  border: 2px solid var(--azul-base);
+  filter: drop-shadow(1px 1px 9px var(--azul-base));
+
 }
+
 #ProjDet_tabs .nav-link {
   color: var(--azul-base);
   background-color: #000000;
-  border: 2px solid #00666b ;
+  border: 2px solid #00666b;
 }

@@ -3,7 +3,7 @@ import Propstypes from 'prop-types'
 import { getFavoriteSongs } from '../services/favoriteSongsAPI'
 import Carregando from './caregando'
 import './components.css'
-import icons from '../../../images/iconT'
+import icons from '../images/iconT'
 
 class MusicCard extends React.Component {
   constructor () {

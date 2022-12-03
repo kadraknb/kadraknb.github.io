@@ -5,6 +5,7 @@ import Context from './Context'
 
 function Provider ({ children }) {
   const [previewProject, setPreviewProject] = useState('')
+  const [iconTecFocada, setIconTecFocada] = useState('')
   const [modalShow, setModalShow] = useState(false)
   const [showDetalhe, setShowDetalhe] = useState(true)
 
@@ -14,7 +15,9 @@ function Provider ({ children }) {
     modalShow,
     setModalShow,
     showDetalhe,
-    setShowDetalhe
+    setShowDetalhe,
+    iconTecFocada,
+    setIconTecFocada
   }
   useEffect(() => console.log(previewProject), [])
 
