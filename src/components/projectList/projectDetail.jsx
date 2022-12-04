@@ -5,7 +5,7 @@ import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 
 import Context from '../../context/Context'
-import './projectList.css'
+import mudarUrl from '../../utils/mudarUrl'
 
 function ProjectDetail ({ project }) {
   const { setPreviewProject, setModalShow, showDetalhe, setShowDetalhe } =
@@ -51,7 +51,7 @@ function ProjectDetail ({ project }) {
             src={gif}
             alt="gif do projeto"
             width="250"
-            className="modalImg"
+            className="modalGif"
           />
           <hr />
           {tecFocus && <h6>{`Aprendizado: ${tecFocus}`}</h6> }
@@ -96,6 +96,7 @@ function ProjectDetail ({ project }) {
                 onClick={() => {
                   setPreviewProject(id)
                   setModalShow(true)
+                  mudarUrl(id)
                   handleClose()
                 }}
               >
@@ -136,11 +137,8 @@ ProjectDetail.propTypes = {
     id: PropTypes.string,
     preview: PropTypes.bool,
     repository: PropTypes.string,
-    habilidadeFocada: PropTypes.arrayOf(PropTypes.string),
-    listTec: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired,
-  // showP: PropTypes.bool.isRequired,
-  setSelectedProject: PropTypes.func.isRequired
+    habilidadeFocada: PropTypes.arrayOf(PropTypes.string)
+  }).isRequired
 }
 
 export default ProjectDetail

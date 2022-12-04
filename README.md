@@ -1,11 +1,8 @@
 
-ajust das foto dos projetos e gif
 foto
-
-project list model erros no console
-add rota ao preview
 ajuste detalhe da lista de projetos
 
+https://www.sonarsource.com/products/sonarcloud/
 up portfolio
 
 app de receita https://codepen.io/ksenia-k/pen/jXbWaJ

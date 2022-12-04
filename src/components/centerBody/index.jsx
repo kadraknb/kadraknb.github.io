@@ -2,7 +2,7 @@ import React from 'react'
 import Accordion from 'react-bootstrap/Accordion'
 import './centerBody.css'
 
-function Centerbory () {
+function CenterBody () {
   return (
     <Accordion defaultActiveKey="0" className="sobreMim sombra efeito-vidro">
       <Accordion.Item eventKey="0" className="buttonSM">
@@ -12,7 +12,7 @@ function Centerbory () {
         <Accordion.Body className='fontBody'>
           Ola, sou o Vagner. <br />
           Moro no Distrito Federal e estou em transição de carreira, onde
-          trabalhei por 5 anos como operado de maquina para desenvolvedor Full Stack.
+          trabalhei por 5 anos como operado de maquina, para desenvolvedor Full Stack.
            <br /> Apaixonado por tecnologia, decidi mudar de
           carreira em busca de satisfação profissional que somente um trabalho na
           área que amo poderia me proporcionar.
@@ -46,4 +46,4 @@ function Centerbory () {
   )
 }
 
-export default Centerbory
+export default CenterBody

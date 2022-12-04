@@ -1,11 +1,9 @@
 .listProject {
   position: relative;
   overflow-y: scroll;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* right: 0; */
   margin-left: -300px;
   padding-left: 300px;
+  height: 100vh;
 }
 
 .listProject::-webkit-scrollbar {
@@ -282,13 +280,14 @@
   flex-wrap: nowrap;
 }
 
-.modalImg {
-  border-radius: 50px;
+.modalGif {
+  border-radius: 5px;
   margin: auto;
   display: flex;
   justify-content: center;
-  filter: var(--drop-shadow-9px) brightness(1);
+  filter: var(--drop-shadow-9px);
   margin-bottom: 20px;
+  max-height: 400px;
 }
 
 .margin-description {

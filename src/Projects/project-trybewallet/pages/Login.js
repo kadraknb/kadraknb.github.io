@@ -28,18 +28,26 @@ class Login extends React.Component {
   render () {
     const { nome } = this.state
     return (
-      <div >
-        <div id='W_login'></div>
+      <div>
+        <div id="W_login"></div>
         <form id="W_form_login">
           <input
-            className='W_F_input'
-            name='nome'
+            className="W_F_input"
+            name="nome"
             type="text"
             placeholder="Seu nome"
             value={nome}
             onChange={(e) => this.change(e)}
           />
-          <button id='W_Bt_login' type="button" disabled={!nome.length > 2} onClick={this.submit}>
+          <button
+            id="W_Bt_login"
+            type="submit"
+            disabled={!nome.length > 2}
+            onClick={(e) => {
+              e.preventDefault()
+              this.submit()
+            }}
+          >
             Entrar
           </button>
         </form>

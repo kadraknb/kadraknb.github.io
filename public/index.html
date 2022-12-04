@@ -39,9 +39,10 @@
         float b = 0.12 / abs(p.y + sin((bx + time) * xScale) * yScale);
         
         gl_FragColor = vec4(r, g, b, 1.0);
+        
       }
       </script>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js'>console.log(time)</script>
       <script  src="./script.js"></script>
       </div>
     <div id="root"></div>
