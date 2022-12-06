@@ -1,4 +1,4 @@
-import email from './iconmonstr-email-2-240.png'
+import email from './email.png'
 import linkedin from './in.png'
 
 const iconTec = {
@@ -6,5 +6,5 @@ const iconTec = {
   linkedin,
   gitHub: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
 }
-
+// https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg
 export default iconTec

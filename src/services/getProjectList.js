@@ -31,6 +31,7 @@ const projectList = [
       'Criar actions assíncronas na sua aplicação React que faz uso de Redux.',
       'Escrever testes para garantir que sua aplicação possua uma boa cobertura de testes.'
     ],
+    descriptionShort: 'Jogo de perguntas e respostas.',
     description:
       'Um jogo de perguntas e respostas baseado no jogo Trivia (tipo um show do milhão norte americano) utilizado React e Redux, desenvolvido em grupo de 4 pessoas'
   },
@@ -52,6 +53,7 @@ const projectList = [
       'Conectar Redux aos componentes React.',
       'Criar actions assíncronas na sua aplicação React que faz uso de Redux.'
     ],
+    descriptionShort: 'Controle de gastos.',
     description: `Neste projeto foi desenvolvido uma aplicação de controle de gastos com conversor de moedas,
      ao utilizar essa aplicação um usuário deverá ser capaz de:
       Adicionar, remover e editar um gasto,
@@ -77,7 +79,8 @@ const projectList = [
       'Utilizar o Switch do React Router.',
       'Criar links de navegação na aplicação com o componente Link.'
     ],
-    description: `Neste projeto foi criado o Tunes,
+    descriptionShort: 'Streaming de música.',
+    description: `Neste projeto foi criado um serviço de streaming de música,
       uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, 
       criar uma lista de músicas favoritas e editar o perfil da pessoa usuária.`
   },
@@ -95,8 +98,9 @@ const projectList = [
       'Usar dados diretamente de uma API',
       'prática o desenvolvimento orientado a testes, o famoso TDD (Test Driven Development)'
     ],
+    descriptionShort: 'E-commerce.',
     description:
-      'Página web de E-commerce, projeto focado na utilização de API.'
+      'Página web de E-commerce usando HTML e js.DOM, projeto focado na utilização de API.'
   },
   {
     id: 'PixelsArt',
@@ -112,6 +116,7 @@ const projectList = [
       'Criar elementos usando JS.DOM',
       'Criar eventos no elementos usando JS.DOM'
     ],
+    descriptionShort: 'Crie desenhos em pixels',
     description:
       'página web que contém uma paleta de cores que poderá ser utilizada para criar desenhos em pixels'
   }

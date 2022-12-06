@@ -11,8 +11,8 @@ function CenterBody () {
         </Accordion.Header>
         <Accordion.Body className='fontBody'>
           Ola, sou o Vagner. <br />
-          Moro no Distrito Federal e estou em transição de carreira, onde
-          trabalhei por 5 anos como operado de maquina, para desenvolvedor Full Stack.
+          Moro no Distrito Federal e estou em transição de carreira,<br/> de operado de maquina onde
+          trabalhei por 5 anos, para desenvolvedor Full Stack.
            <br /> Apaixonado por tecnologia, decidi mudar de
           carreira em busca de satisfação profissional que somente um trabalho na
           área que amo poderia me proporcionar.
@@ -23,17 +23,15 @@ function CenterBody () {
           <strong className='headerFont'>Possuo conhecimento em</strong>
         </Accordion.Header>
         <Accordion.Body className='fontBody'>
-          <strong>Desenvolvimento Front-end</strong>: React, Estado e Eventos,
-          Componentes Controlados, Router, Testes com RTL e Jest, Redux com
-          React, Context API e React Hooks, HTML e CSS. <br />
+          <strong>Desenvolvimento Front-end</strong>:
+          React: Router, Redux, Context API e Hooks; Testes com RTL e Jest, HTML e CSS. <br />
           <br />
-          <strong>Desenvolvimento Back-end</strong>: NodeJS, módulo FS, SQL,
-          Node.js com MySQL2, Docker e Docker-compose,Testes com Mocha, Chai,
-          Sinon e Chai HTTP. <br />
+          <strong>Desenvolvimento Back-end</strong>: NodeJS, módulo FS, MySQL, Sequelize, Docker ,Testes com Mocha, Chai e
+          Sinon. <br />
           <br />
           <strong>Soft Skills</strong>: Metodologias ágeis: Scrum, Kanban. <br />
           <br />
-          <strong>Tecnologias</strong>: Git e GitHub, Unix e Bash, TypeScript, JavaScript ES6.
+          <strong>Tecnologias</strong>: Git, Unix e Bash, TypeScript, JavaScript ES6.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2" className="buttonSM">

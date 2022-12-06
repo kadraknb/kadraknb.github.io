@@ -2,12 +2,29 @@
 .imgProfile {
   width: 253px;
   height: 250px;
-  margin-bottom: 20px;
+  margin: 0px ;
+  border-radius: 50%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 5px -5px 40px var(--azul-base);
+  
+
+}
+.glassImg {
+  position: fixed;
+  top: 0;
+  width: 253px;
+  height: 250px;
+  border-radius: 50%;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 5px -5px 40px var(--azul-base), -5px -5px 40px var(--azul-base);
+  filter: drop-shadow(1px 1px 30px #03e9f4);
 }
 .nomeP{
   filter: var(--drop-shadow-9px) brightness(20);
   border-bottom: 1px solid #00909785;
-
+  padding-left: 10px;
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 146, 243, 0.178));
 }
 /* contato/////////// */
@@ -25,6 +42,7 @@
 .contatos .list-group-item {
   --bs-list-group-bg: none;
   --bs-list-group-border-color: rgb(0 217 255 / 23%);
+  border-left: 0;
 }
 .Clink {
   margin-left:  9px ;
@@ -40,10 +58,7 @@
 }
 .Perf_email {
   color: var(--azul-base);
-  /* font-size: 20px; */
   margin-bottom: 0;
-  /* margin-left: 10px; */
-  /* padding: 0; */
   margin: 0 auto;
 
 }
@@ -58,6 +73,9 @@
 .profile {
   width: 280px;
   height: 100%;
+  border-top: 0;
+  border-left: 0;
+  border-top-right-radius: 110px;
 }
 /* icon tecs///////////// */
 .ulIconTec{

@@ -29,8 +29,7 @@ function ListaProjetos () {
                   {project.name}
                 </Card.Title>
                 <Card.Text className="ProjList_li_txt">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the cards content.
+                  {project.descriptionShort}
                 </Card.Text>
                 <button
                   className={`ProjList_li_BT ${!load && 'load'}`}

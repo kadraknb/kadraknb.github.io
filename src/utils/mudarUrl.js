@@ -1,6 +1,5 @@
 const mudarUrl = (idProjeto) => {
   const seg = Date.now()
-  console.log(seg)
   const state = { page_id: seg, user_id: seg }
 
   const origin = global.location.origin
