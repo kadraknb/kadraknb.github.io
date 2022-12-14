@@ -45,7 +45,7 @@
 
 .hover-proj:hover {
   background-color: #000000e0;
-  animation: animateProjHover 0.5s linear both;
+  animation: animateProjHover 0.2s linear both;
 }
 
 @keyframes animateProjHover {
