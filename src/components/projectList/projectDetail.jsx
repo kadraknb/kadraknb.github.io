@@ -5,10 +5,10 @@ import Tab from 'react-bootstrap/Tab'
 import Tabs from 'react-bootstrap/Tabs'
 
 import Context from '../../context/Context'
-import mudarUrl from '../../utils/mudarUrl'
+// import mudarUrl from '../../utils/mudarUrl'
 
 function ProjectDetail ({ project }) {
-  const { setPreviewProject, setModalShow, showDetalhe, setShowDetalhe } =
+  const { showDetalhe, setShowDetalhe } =
     useContext(Context)
 
   const handleClose = () => setShowDetalhe(false)
@@ -19,7 +19,6 @@ function ProjectDetail ({ project }) {
     gif,
     tecFocus,
     projectGroup,
-    id,
     repository,
     preview,
     habilidadeFocada
@@ -94,9 +93,6 @@ function ProjectDetail ({ project }) {
               <a
                 className="button modalButton"
                 onClick={() => {
-                  setPreviewProject(id)
-                  setModalShow(true)
-                  mudarUrl(id)
                   handleClose()
                 }}
               >
@@ -134,7 +130,6 @@ ProjectDetail.propTypes = {
     description: PropTypes.string,
     tecFocus: PropTypes.string,
     projectGroup: PropTypes.bool,
-    id: PropTypes.string,
     preview: PropTypes.bool,
     repository: PropTypes.string,
     habilidadeFocada: PropTypes.arrayOf(PropTypes.string)

@@ -1,17 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import './App.css'
-import Body from './components/body'
-import validarRota from './utils/validarRota'
+
+import CenterBody from './components/centerBody'
+import Profile from './components/profile'
+import ProjectList from './components/projectList'
+import Context from './context/Context'
 
 function App () {
-  const [rotaProjeto, setRotaProjeto] = useState(false)
-  useEffect(() => setRotaProjeto(validarRota()), [])
+  const { showDetalhe } = useContext(Context)
+
   return (
-    <div >
-    <Body rotaProjeto={rotaProjeto} />
-    </div>
+    <>
+      <main id="Body_All">
+      <>
+        <aside className="transition">
+          <Profile />
+        </aside>
+        <section
+          className="transition centerBody"
+          id={showDetalhe ? 'ocultarSobreMim' : ''}
+        >
+          <CenterBody />
+        </section>
+        <aside className="transition">
+          <ProjectList />
+        </aside>
+      </>
+    </main>
+    </>
   )
 }
 
