@@ -4,15 +4,10 @@
   "private": true,
   "dependencies": {
     "clipboard-copy": "^4.0.1",
-    "crypto-js": "^4.1.1",
-    "devicon": "^2.15.1",
-    "framer-motion": "^7.3.6",
-    "node-sass": "^7.0.3",
+    "bootstrap": "^5.2.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
-    "react-countdown": "^2.3.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "5.2.0",
     "react-scripts": "5.0.1",
     "react-usestateref": "^1.0.8",
     "web-vitals": "^2.1.4"
@@ -43,16 +38,11 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.2",
-    "bootstrap": "^5.2.1",
     "eslint": "^8.23.0",
     "eslint-config-standard-with-typescript": "^22.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
     "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-react": "^7.31.7",
-    "react-redux": "^8.0.2",
-    "redux": "^4.2.0",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1"
+    "eslint-plugin-react": "^7.31.7"
   }
 }

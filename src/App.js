@@ -14,5 +14,5 @@ function App () {
     </div>
   )
 }
-// "homepage": "https://kadraknb.github.io/kadraknb.github.io",
+
 export default App

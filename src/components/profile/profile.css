@@ -6,7 +6,7 @@
   border-radius: 50%;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  box-shadow: 5px -5px 40px var(--azul-base);
+  /* box-shadow: 5px -5px 40px var(--azul-base); */
   
 
 }
@@ -75,7 +75,7 @@
   height: 100%;
   border-top: 0;
   border-left: 0;
-  border-top-right-radius: 110px;
+  /* border-top-right-radius: 110px; */
 }
 /* icon tecs///////////// */
 .ulIconTec{
@@ -113,14 +113,14 @@
 }
 .popover-header {
   background-color: #000000;
-  border: 1px solid var(--azul-base);
+  /* border: 1px solid var(--azul-base); */
   border-bottom: 1px solid #03e8f463;
   color: var(--azul-base);
 }
 .popover-body {
   background-color: #000000;
   border-radius: 0 0  7px 7px;
-  border: 1px solid var(--azul-base);
+  /* border: 1px solid var(--azul-base); */
   border-top: 0;
   color: var(--azul-base);
 }
