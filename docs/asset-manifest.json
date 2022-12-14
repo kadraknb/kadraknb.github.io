@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6101172a.css",
+    "main.js": "/static/js/main.3977f3ae.js",
+    "static/media/shoppingCart.gif": "/static/media/shoppingCart.c58504fccea387f81a1a.gif",
+    "static/media/tuner.gif": "/static/media/tuner.0f60e1e600824a7f02af.gif",
+    "static/media/wallet.gif": "/static/media/wallet.0242c602499a10cb8e54.gif",
+    "static/media/pixelArt.gif": "/static/media/pixelArt.544f4a4f64aeb94b9d44.gif",
+    "static/media/trivia.gif": "/static/media/trivia.62d4f973e20735b60af9.gif",
+    "static/media/foto.jpg": "/static/media/foto.e223f74f15dc4f0f39fb.jpg",
+    "static/media/shoppingCart.png": "/static/media/shoppingCart.ff17679d82a84452b932.png",
+    "static/media/tuner.png": "/static/media/tuner.35c225167c6643a1c978.png",
+    "static/media/trivia.png": "/static/media/trivia.40c3ed140233e4d7e5ee.png",
+    "static/media/wallet.png": "/static/media/wallet.1adef7ffbb7b9acebd47.png",
+    "index.html": "/index.html",
+    "main.6101172a.css.map": "/static/css/main.6101172a.css.map",
+    "main.3977f3ae.js.map": "/static/js/main.3977f3ae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6101172a.css",
+    "static/js/main.3977f3ae.js"
+  ]
+}
