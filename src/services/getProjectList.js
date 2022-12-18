@@ -25,8 +25,8 @@ const projectList = [
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub', 'Trello'],
     preview: true,
     projectGroup: true,
-    linkPreview: '',
-    repository: 'https://github.com/kadraknb/Project-trivia',
+    linkPreview: 'https://kadraknb.github.io/trivia/',
+    repository: 'https://github.com/kadraknb/trivia',
     habilidadeFocada: [
       'Criar um store Redux em aplicações React.',
       'Conectar Redux aos componentes React.',
@@ -46,8 +46,8 @@ const projectList = [
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
-    linkPreview: '',
-    repository: '',
+    linkPreview: 'https://kadraknb.github.io/wallet/',
+    repository: 'https://github.com/kadraknb/wallet',
     habilidadeFocada: [
       'Criar um store Redux em aplicações React.',
       'Criar reducers no Redux em aplicações React.',
@@ -72,8 +72,8 @@ const projectList = [
     listTec: ['React', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
-    linkPreview: '',
-    repository: 'https://github.com/kadraknb/trybetunes',
+    linkPreview: 'https://kadraknb.github.io/tunes/',
+    repository: 'https://github.com/kadraknb/tunes',
     habilidadeFocada: [
       'Fazer requisições e consumir dados vindos de uma API.',
       'Utilizar os ciclos de vida de um componente React.',
