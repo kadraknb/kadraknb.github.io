@@ -1,8 +1,8 @@
 import PixelsArt from './domPArt.png'
-import ShoppingCart from './shoppingCart.png'
-import Tunes from './tuner.png'
-import Wallet from './wallet.png'
-import Trivia from './trivia.png'
+import ShoppingCart from './cart2.png'
+import Tunes from './tuner2.png'
+import Wallet from './wallet3.png'
+import Trivia from './trivia2.png'
 
 const imgProjetos = {
   PixelsArt,

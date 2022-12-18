@@ -6,6 +6,7 @@
 //   tecFocus: '',
 //   listTec: [''],
 //   projectGroup: false,
+//   linkPreview: '',
 //   repository: '',
 //   habilidadeFocada: [],
 //   description: '',
@@ -24,6 +25,7 @@ const projectList = [
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub', 'Trello'],
     preview: true,
     projectGroup: true,
+    linkPreview: '',
     repository: 'https://github.com/kadraknb/Project-trivia',
     habilidadeFocada: [
       'Criar um store Redux em aplicações React.',
@@ -44,6 +46,7 @@ const projectList = [
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
+    linkPreview: '',
     repository: '',
     habilidadeFocada: [
       'Criar um store Redux em aplicações React.',
@@ -69,6 +72,7 @@ const projectList = [
     listTec: ['React', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
+    linkPreview: '',
     repository: 'https://github.com/kadraknb/trybetunes',
     habilidadeFocada: [
       'Fazer requisições e consumir dados vindos de uma API.',
@@ -93,6 +97,7 @@ const projectList = [
     listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
+    linkPreview: 'https://kadraknb.github.io/shopping-cart/',
     repository: 'https://github.com/kadraknb/shopping-cart',
     habilidadeFocada: [
       'Usar dados diretamente de uma API',
@@ -111,6 +116,7 @@ const projectList = [
     listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,
     projectGroup: false,
+    linkPreview: 'https://kadraknb.github.io/pixels-art/',
     repository: 'https://github.com/kadraknb/pixels-art',
     habilidadeFocada: [
       'Criar elementos usando JS.DOM',

@@ -11,7 +11,7 @@ function IconsTec () {
   const { iconTecFocada, setIconTecFocada } = useContext(Context)
 
   return (
-    <>
+    <div id='iconsTec_mein'>
       <h6 className="text-b-b">Ferramentas</h6>
       <ul className="ulIconTec ">
         {Object.values(iconTec).map((tec, ii) => {
@@ -54,7 +54,7 @@ function IconsTec () {
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 

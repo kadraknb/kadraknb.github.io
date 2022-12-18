@@ -72,23 +72,57 @@
 }
 .profile {
   width: 280px;
-  height: 100%;
+  height: 100vh;
   border-top: 0;
   border-left: 0;
-  /* border-top-right-radius: 110px; */
+  /* position: fixed; */
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
+  /* transition: 2.3s; */
+  /* overflow-y: auto; */
+  /* overflow-x: hidden; */
+
+}
+@media (max-height: 929px) {
+  .profile {
+    width: 285px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* transition: 2.3s; */
+  }
+}
+.profile::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #f5f5f500;
+}
+
+.profile::-webkit-scrollbar
+{
+  position: fixed;
+	width: 5px;
+	background-color: #f5f5f500;
+}
+
+.profile::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 238, 255, 0.658);
+	background-color: #00000083;
 }
 /* icon tecs///////////// */
+#iconsTec_mein {
+  width: 280px;
+
+}
 .ulIconTec{
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   list-style: none;
   margin: 0px;
   padding: 0px;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 3px;
 }
 .liIconTec{
   height: 100px;
@@ -113,14 +147,12 @@
 }
 .popover-header {
   background-color: #000000;
-  /* border: 1px solid var(--azul-base); */
   border-bottom: 1px solid #03e8f463;
   color: var(--azul-base);
 }
 .popover-body {
   background-color: #000000;
   border-radius: 0 0  7px 7px;
-  /* border: 1px solid var(--azul-base); */
   border-top: 0;
   color: var(--azul-base);
 }
