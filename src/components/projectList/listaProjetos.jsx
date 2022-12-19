@@ -13,6 +13,7 @@ function ListaProjetos () {
   const seila = () => {
     setTimeout(() => setLoad(true), 1000)
   }
+
   return (
     <ul className="ulProj">
         {projectList.map((project, index) => (

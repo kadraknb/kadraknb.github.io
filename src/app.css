@@ -12,6 +12,7 @@
 
 /* ////////ALL/////// */
 .efeito-vidro {
+  
   background: #00000056;
   /* box-shadow: 0 4px 30px var(--azul-base); */
   backdrop-filter: blur(5.2px);
@@ -34,7 +35,7 @@
   color: var(--azul-base);
   border-bottom: 1px solid var(--azul-base);
   text-transform: uppercase;
-  width: max-content;
+  /* width: max-content; */
 }
 
 #Body_All {

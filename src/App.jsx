@@ -9,11 +9,16 @@ import ProjectList from './components/projectList';
 import Context from './context/Context';
 
 function App() {
-  const { showDetalhe } = useContext(Context);
+  const { showDetalhe, windowWidth } = useContext(Context);
+
+  const ajusteTela = {
+    zoom:
+      windowWidth < 1000 ? `${100 - (1000 - windowWidth) / 10}%` : 100 + '%'
+  };
 
   return (
     <>
-      <main id="Body_All">
+      <main id="Body_All" style={ajusteTela}>
         <aside className="transition">
           <Profile />
         </aside>
