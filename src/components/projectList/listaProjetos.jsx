@@ -24,6 +24,7 @@ function ListaProjetos () {
           >
             <Card className="efeito-vidro">
               <Card.Img className="imgLP" variant="top" src={project.icon} />
+              <div id='glass_listProj' />
               <Card.Body>
                 <Card.Title className="ProjList_li_nome">
                   {project.name}

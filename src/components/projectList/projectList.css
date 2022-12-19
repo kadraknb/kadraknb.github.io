@@ -120,6 +120,11 @@
   animation: animateProjHover 0.5s linear both;
 
 }
+#glass_listProj {
+  position: fixed;
+  width: 100%;
+  height: 140px;
+}
 
 /* ///////project detail//////// */
 .button {

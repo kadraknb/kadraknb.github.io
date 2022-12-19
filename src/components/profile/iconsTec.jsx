@@ -48,6 +48,7 @@ function IconsTec () {
                     iconTecFocada === nome && 'Perfil_imgTec_brilho'
                   } `}
                 />
+                <div id='glass_iconTec' onClick={() => setIconTecFocada(nome)} />
               </li>
             </OverlayTrigger>
           )
