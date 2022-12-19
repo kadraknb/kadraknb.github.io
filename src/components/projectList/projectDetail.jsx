@@ -21,6 +21,7 @@ function ProjectDetail ({ project }) {
     projectGroup,
     repository,
     preview,
+    linkPreview,
     habilidadeFocada
   } = project
 
@@ -91,6 +92,7 @@ function ProjectDetail ({ project }) {
           <div className="divButton">
             {preview && (
               <a
+              href={linkPreview}
                 className="button modalButton"
                 onClick={() => {
                   handleClose()
