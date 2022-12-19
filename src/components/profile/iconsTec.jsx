@@ -3,7 +3,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import Popover from 'react-bootstrap/Popover'
 
-// import './profile.css'
 import Context from '../../context/Context'
 import iconTec from '../../services/getTec'
 

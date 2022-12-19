@@ -89,7 +89,7 @@ class Mesh {
 
     this.uniforms = {
       resolution: { type: 'v2', value: [this.canvasWidth, this.canvasHeight] },
-      time: { type: 'f', value: 0.0 },
+      time: { type: 'f', value: 0 },
       xScale: { type: 'f', value: 1.0 },
       yScale: { type: 'f', value: 0.5 },
       distortion: { type: 'f', value: 0.10 }
