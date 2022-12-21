@@ -6,5 +6,4 @@ const iconTec = {
   linkedin,
   gitHub: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'
 }
-// https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg
 export default iconTec

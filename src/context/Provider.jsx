@@ -7,7 +7,6 @@ function Provider({ children }) {
   const [showDetalhe, setShowDetalhe] = useState(false);
   const [iconTecFocada, setIconTecFocada] = useState('');
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [nav, setNav] = useState('Perfil');
 
   // style
   const ajusteTelaWidth = {
@@ -20,10 +19,6 @@ function Provider({ children }) {
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
-      console.log(
-        '🚀 ~ file: Provider.jsx:22 ~ handleResize ~ window.innerWidth',
-        window.innerWidth
-      );
     }
 
     window.addEventListener('resize', () => handleResize());
@@ -37,8 +32,6 @@ function Provider({ children }) {
     setIconTecFocada,
     windowWidth,
     ajusteTelaWidth,
-    nav,
-    setNav,
   };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

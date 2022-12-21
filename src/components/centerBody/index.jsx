@@ -4,7 +4,7 @@ import './centerBody.css'
 
 function CenterBody () {
   return (
-    <Accordion defaultActiveKey="0" className="sobreMim sombra efeito-vidro">
+    <Accordion defaultActiveKey="0" className="sobreMim transition sombra efeito-vidro">
       <Accordion.Item eventKey="0" className="buttonSM">
         <Accordion.Header className="headerSM">
           <strong className='headerFont'>Sobre mim</strong>

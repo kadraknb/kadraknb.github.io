@@ -3,12 +3,7 @@
   overflow-y: scroll;
   margin-left: -300px;
   padding-left: 300px;
-  height: 100vh;
   z-index: 1;
-}
-.listProject:hover {
-  margin-left: -300px;
-  padding-left: 300px;
 }
 
 .listProject::-webkit-scrollbar {
@@ -42,6 +37,7 @@
 .liProj .card {
   border-radius: 0;
 }
+
 .liProj .card-body {
   display: flex;
   flex-direction: column;
@@ -54,8 +50,6 @@
 }
 
 @keyframes animateProjHover {
-  0% {}
-
   100% {
     box-shadow: var(--box-shadow-max);
   }
@@ -65,22 +59,24 @@
   0% {
     box-shadow: var(--box-shadow-max);
   }
-
-  100% {}
 }
 
 .projListTitle {
-  color: #7af7fd;
   text-transform: uppercase;
-  width: max-content;
-  margin: 5px auto;
+  display: flex;
+  background: linear-gradient(to top,
+      #03e9f4 0%,
+      #03e8f4b2 50%,
+      #03e8f460 75%,
+      #03e8f427 100%);
+  color: #000000;
+  box-shadow: 0 0 30px var(--azul-base);
 }
 
 .h2Title {
-  border: 1px solid rgb(0 217 255 / 23%);
+  display: flex;
+  justify-content: center;
   margin: 0;
-  padding-left: 10%;
-  width: 200px;
 }
 
 .imgLP {
@@ -93,10 +89,8 @@
 
 .ProjList_li_txt {
   box-shadow: -1px -1px 3px var(--azul-base);
+  border: solid 1px #03e8f41f;
   border-top: solid 1px #03e8f469;
-  border-right: solid 1px #03e8f41f;
-  border-left: solid 1px #03e8f41f;
-  border-bottom: solid 1px #03e8f41f;
   border-radius: 5px;
   padding-left: 3px;
 }
@@ -125,6 +119,7 @@
   animation: animateProjHover 0.5s linear both;
 
 }
+
 #glass_listProj {
   position: fixed;
   width: 100%;
@@ -329,6 +324,7 @@
   .projListTitle {
     opacity: 0;
   }
+
   .ulProj {
     margin-bottom: 50px;
     display: flex;
@@ -336,36 +332,44 @@
     justify-content: space-around;
     border-radius: 10px;
   }
+
   .liProj {
     margin: 10px;
   }
+
   .liProj .card {
     border-radius: 10px;
   }
+
   .card-body {
     height: 150px;
   }
 }
+
 @media (max-width: 576px) {
   .modal-dialog {
-    margin: 1rem ;
+    margin: 1rem;
     max-width: 100%;
     max-height: 100;
   }
 }
+
 @media (max-width: 460px) {
   .divButton {
     zoom: 80%;
   }
+
   .modal-dialog {
-    margin: 0rem ;
+    margin: 0rem;
     max-width: 100%;
     max-height: 100;
   }
+
   .modal-content {
     border-radius: 0;
   }
 }
+
 @media (max-width: 370px) {
   .divButton {
     zoom: 68%;

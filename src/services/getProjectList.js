@@ -2,7 +2,6 @@
 //   id: 0,
 //   name: '',
 //   icon: '',
-//   gif: '',
 //   tecFocus: '',
 //   listTec: [''],
 //   projectGroup: false,
@@ -13,14 +12,12 @@
 // },
 
 import imgProjetos from './images'
-import gifProjetos from './gif'
 
 const projectList = [
   {
     id: 'Trivia',
     name: 'Trivia',
     icon: imgProjetos.Trivia,
-    gif: gifProjetos.Trivia,
     tecFocus: 'Redux, Redux-thunk',
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub', 'Trello'],
     preview: true,
@@ -41,7 +38,6 @@ const projectList = [
     id: 'Wallet',
     name: 'Wallet',
     icon: imgProjetos.Wallet,
-    gif: gifProjetos.Wallet,
     tecFocus: 'react-redux',
     listTec: ['React', 'Redux', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
@@ -67,7 +63,6 @@ const projectList = [
     id: 'Tunes',
     name: 'Tunes',
     icon: imgProjetos.Tunes,
-    gif: gifProjetos.Tunes,
     tecFocus: 'React Router',
     listTec: ['React', 'JavaScript', 'CSS', 'GitHub'],
     preview: true,
@@ -92,7 +87,6 @@ const projectList = [
     id: 'ShoppingCart',
     name: 'Shopping cart',
     icon: imgProjetos.ShoppingCart,
-    gif: gifProjetos.ShoppingCart,
     tecFocus: 'JavaScript.DOM',
     listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,
@@ -111,7 +105,6 @@ const projectList = [
     id: 'PixelsArt',
     name: 'pixels art',
     icon: imgProjetos.PixelsArt,
-    gif: gifProjetos.PixelsArt,
     tecFocus: 'JavaScript.DOM',
     listTec: ['DOM', 'JavaScript', 'HTML', 'CSS', 'GitHub'],
     preview: true,

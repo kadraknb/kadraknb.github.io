@@ -10,8 +10,7 @@ import Context from './context/Context';
 import Header from './components/header';
 
 function App() {
-  const { showDetalhe, windowWidth, ajusteTelaWidth, nav } =
-    useContext(Context);
+  const { showDetalhe, windowWidth, ajusteTelaWidth } = useContext(Context);
 
   const ajusteTelaZoom = {
     zoom:
@@ -20,18 +19,11 @@ function App() {
         : 100 + '%',
   };
 
-  const navSelecionada = {
-    Perfil: <Profile />,
-    SobreMim: <CenterBody />,
-    Projetos: <ProjectList />,
-  };
-
   return (
     <>
       {windowWidth < 700 ? (
         <>
           <Header />
-          {navSelecionada[nav]}
         </>
       ) : (
         <main id="Body_All" style={ajusteTelaZoom}>
@@ -43,12 +35,13 @@ function App() {
             <Profile />
           </aside>
           <section
-            className="itensApp transition centerBody"
-            id={showDetalhe ? 'ocultarSobreMim' : ''}
+            className={`transition centerBody ${
+              showDetalhe ? 'ocultarSobreMim' : ''
+            }`}
           >
             <CenterBody />
           </section>
-          <aside className="itensApp ">
+          <aside>
             <ProjectList />
           </aside>
         </main>

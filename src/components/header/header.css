@@ -25,7 +25,8 @@
   letter-spacing: 2px;
 }
 
-.box_nav:hover, .navSelecionada {
+.box_nav:hover,
+.navSelecionada {
   background: linear-gradient(to top,
       #00f2ff 0%,
       #014649 50%,

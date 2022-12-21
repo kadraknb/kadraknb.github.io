@@ -13,11 +13,11 @@ function IconsTec () {
     <div id='iconsTec_mein'>
       <h6 className="text-b-b">Ferramentas</h6>
       <ul className="ulIconTec ">
-        {Object.values(iconTec).map((tec, ii) => {
+        {Object.values(iconTec).map((tec) => {
           const { nome, descricao, img } = tec
           return (
             <OverlayTrigger
-              key={tec + ii}
+              key={tec.nome}
               placement="right"
               overlay={
                 iconTecFocada === nome
