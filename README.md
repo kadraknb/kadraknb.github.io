@@ -1,4 +1,3 @@
-ajuste mob
 
 app de receita https://codepen.io/ksenia-k/pen/jXbWaJ
 ao foca icon exebir projetos focados em primeiro 
