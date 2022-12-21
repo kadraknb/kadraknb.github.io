@@ -1,8 +1,9 @@
 .sobreMim {
   position: relative;
   top: 100px;
-  width: 100%;
+  /* width: 100%; */
   z-index: 2;
+  margin: 10px;
 }
 .centerBody {
   width: 60%;
@@ -39,4 +40,10 @@
   --bs-accordion-btn-color: #050801;
   color: #050801;
   box-shadow: var(--box-shadow-max);
+}
+
+@media (max-width: 370px) {
+  .sobreMim {
+    zoom: 80%;
+  }
 }

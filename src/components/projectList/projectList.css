@@ -42,6 +42,11 @@
 .liProj .card {
   border-radius: 0;
 }
+.liProj .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 
 .hover-proj:hover {
   background-color: #000000e0;
@@ -318,4 +323,51 @@
   color: var(--azul-base);
   background-color: #000000;
   border: 2px solid #00666b;
+}
+
+@media (max-width: 700px) {
+  .projListTitle {
+    opacity: 0;
+  }
+  .ulProj {
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px;
+  }
+  .liProj {
+    margin: 10px;
+  }
+  .liProj .card {
+    border-radius: 10px;
+  }
+  .card-body {
+    height: 150px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 1rem ;
+    max-width: 100%;
+    max-height: 100;
+  }
+}
+@media (max-width: 460px) {
+  .divButton {
+    zoom: 80%;
+  }
+  .modal-dialog {
+    margin: 0rem ;
+    max-width: 100%;
+    max-height: 100;
+  }
+  .modal-content {
+    border-radius: 0;
+  }
+}
+@media (max-width: 370px) {
+  .divButton {
+    zoom: 68%;
+  }
 }

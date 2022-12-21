@@ -5,13 +5,10 @@ import Context from '../../context/Context';
 
 
 function ProjectList () {
-  const { windowWidth } = useContext(Context);
+  const { ajusteTelaWidth } = useContext(Context);
 
-    const ajusteTela = {
-      height: windowWidth < 1000 ? `1${(1100 - windowWidth) / 10}%` : 100 + '%'
-  };
   return (
-    <div className="listProject " style={ajusteTela}>
+    <div className="listProject " style={ajusteTelaWidth}>
       <h2 className="h2Title projListTitle">projetos</h2>
       <ListaProjetos />
     </div>

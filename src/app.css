@@ -55,10 +55,10 @@
 .transition {
   transition: 1.5s;
 }
-#ocultarProfile {
+/* #ocultarProfile {
   margin-left: -290px;
   opacity: 0;
-}
+} */
 #ocultarSobreMim {
   margin-left: 290px;
   margin-right: 290px;
@@ -75,4 +75,10 @@
 #ocultarProjectList{
   margin-right: -290px;
   opacity: 0;
+}
+#itemAppProfile {
+  position:  relative;
+  min-width: 280px;
+  height: 100vh;
+
 }

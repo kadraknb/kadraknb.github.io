@@ -7,13 +7,11 @@ import photoProfile from '../.././images/foto.jpg'
 import Context from '../../context/Context';
 
 function Profile () {
-  const { windowWidth } = useContext(Context);
+  const { ajusteTelaWidth } = useContext(Context);
 
-  const ajusteTela = {
-    height: windowWidth < 1000 ? `1${(1100 - windowWidth) / 10}%` : 100 + '%'
-};
+
   return (
-    <div className="profile efeito-vidro" style={ajusteTela}>
+    <div className="profile efeito-vidro" style={ajusteTelaWidth}>
       <img src={photoProfile} alt="photoProfile" className="imgProfile" />
       <div className='glassImg'></div>
       <div>
