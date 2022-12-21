@@ -3,7 +3,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import Popover from 'react-bootstrap/Popover'
 
-// import './profile.css'
 import Context from '../../context/Context'
 import iconTec from '../../services/getTec'
 
@@ -11,14 +10,14 @@ function IconsTec () {
   const { iconTecFocada, setIconTecFocada } = useContext(Context)
 
   return (
-    <>
+    <div id='iconsTec_mein'>
       <h6 className="text-b-b">Ferramentas</h6>
       <ul className="ulIconTec ">
-        {Object.values(iconTec).map((tec, ii) => {
+        {Object.values(iconTec).map((tec) => {
           const { nome, descricao, img } = tec
           return (
             <OverlayTrigger
-              key={tec + ii}
+              key={tec.nome}
               placement="right"
               overlay={
                 iconTecFocada === nome
@@ -49,12 +48,13 @@ function IconsTec () {
                     iconTecFocada === nome && 'Perfil_imgTec_brilho'
                   } `}
                 />
+                <div id='glass_iconTec' onClick={() => setIconTecFocada(nome)} />
               </li>
             </OverlayTrigger>
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 

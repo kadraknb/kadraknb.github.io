@@ -1,23 +1,26 @@
-import React, { useRef, useState } from 'react'
-import clipboardCopy from 'clipboard-copy'
-import ListGroup from 'react-bootstrap/ListGroup'
-import Overlay from 'react-bootstrap/Overlay'
-import Tooltip from 'react-bootstrap/Tooltip'
-import iconTec from '../../images'
+import React, { useRef, useState } from 'react';
+import clipboardCopy from 'clipboard-copy';
+import ListGroup from 'react-bootstrap/ListGroup';
+import Overlay from 'react-bootstrap/Overlay';
+import Tooltip from 'react-bootstrap/Tooltip';
+import iconTec from '../../images';
 
-function Contatos () {
-  const [show, setShow] = useState(false)
-  const target = useRef(null)
+function Contatos() {
+  const [show, setShow] = useState(false);
+  const target = useRef(null);
 
   const fechaPop = () => {
-    setShow(true)
-    setTimeout(() => setShow(false), 3000)
-  }
+    setShow(true);
+    setTimeout(() => setShow(false), 3000);
+  };
   return (
     <>
       <ListGroup className="contatos">
         <ListGroup.Item>
-          <img src={iconTec.gitHub} alt="technology icon" className="imgC" />
+          <>
+            <img src={iconTec.gitHub} alt="technology icon" className="imgC" />
+            <div className="gless_contat" ></div>
+          </>
           <a
             target="_blank"
             href="https://github.com/kadraknb"
@@ -28,7 +31,14 @@ function Contatos () {
           </a>
         </ListGroup.Item>
         <ListGroup.Item>
-          <img src={iconTec.linkedin} alt="technology icon" className="imgC" />
+          <>
+            <img
+              src={iconTec.linkedin}
+              alt="technology icon"
+              className="imgC"
+            />
+            <div className="gless_contat" />
+          </>
           <a
             target="_blank"
             href="https://www.linkedin.com/in/vagner-cardos-santos/"
@@ -39,7 +49,10 @@ function Contatos () {
           </a>
         </ListGroup.Item>
         <ListGroup.Item className="emailCopy">
-          <img src={iconTec.email} alt="technology icon" className="imgC" />
+          <div>
+            <img src={iconTec.email} alt="technology icon" className="imgC" />
+            <div className="gless_contat" />
+          </div>
           <div id="Perf_box_email">
             <p className="Perf_email">vagner_cardoso_s</p>
             <p className="Perf_email">@outlook.com</p>
@@ -47,8 +60,8 @@ function Contatos () {
               className="Copying"
               ref={target}
               onClick={() => {
-                clipboardCopy('vagner_cardoso_s@outlook.com')
-                fechaPop()
+                clipboardCopy('vagner_cardoso_s@outlook.com');
+                fechaPop();
               }}
             >
               Copiar email
@@ -64,7 +77,7 @@ function Contatos () {
         </ListGroup.Item>
       </ListGroup>
     </>
-  )
+  );
 }
 
-export default Contatos
+export default Contatos;

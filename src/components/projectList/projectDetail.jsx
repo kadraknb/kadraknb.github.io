@@ -1,29 +1,27 @@
-import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
-import Modal from 'react-bootstrap/Modal'
-import Tab from 'react-bootstrap/Tab'
-import Tabs from 'react-bootstrap/Tabs'
+import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+import Modal from 'react-bootstrap/Modal';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
-import Context from '../../context/Context'
-import mudarUrl from '../../utils/mudarUrl'
+import Context from '../../context/Context';
 
-function ProjectDetail ({ project }) {
-  const { setPreviewProject, setModalShow, showDetalhe, setShowDetalhe } =
-    useContext(Context)
+function ProjectDetail({ project }) {
+  const { showDetalhe, setShowDetalhe } = useContext(Context);
 
-  const handleClose = () => setShowDetalhe(false)
+  const handleClose = () => setShowDetalhe(false);
 
   const {
     name,
     description,
-    gif,
+    icon,
     tecFocus,
     projectGroup,
-    id,
     repository,
     preview,
-    habilidadeFocada
-  } = project
+    linkPreview,
+    habilidadeFocada,
+  } = project;
 
   return (
     <div>
@@ -48,13 +46,13 @@ function ProjectDetail ({ project }) {
         <hr className="Modal-hr" />
         <Modal.Body>
           <img
-            src={gif}
+            src={icon}
             alt="gif do projeto"
             width="250"
             className="modalGif"
           />
           <hr />
-          {tecFocus && <h6>{`Aprendizado: ${tecFocus}`}</h6> }
+          {tecFocus && <h6>{`Aprendizado: ${tecFocus}`}</h6>}
           {projectGroup && <h6>projeto em grupo</h6>}
           <hr />
           <div id="ProjDet_tabs">
@@ -69,7 +67,6 @@ function ProjectDetail ({ project }) {
                 className="ProjDet_tab"
                 eventKey="desenvolvido"
                 title="desenvolvido"
-                onClick={(e) => e.preventDefault()}
               >
                 {description}
               </Tab>
@@ -80,7 +77,7 @@ function ProjectDetail ({ project }) {
               >
                 <ul>
                   {habilidadeFocada.map((habilidade, i) => (
-                    <li key={i}>
+                    <li key={(Math.random() * 10).toPrecision(10)}>
                       <h6>{habilidade}</h6>
                     </li>
                   ))}
@@ -92,12 +89,10 @@ function ProjectDetail ({ project }) {
           <div className="divButton">
             {preview && (
               <a
+                href={linkPreview}
                 className="button modalButton"
                 onClick={() => {
-                  setPreviewProject(id)
-                  setModalShow(true)
-                  mudarUrl(id)
-                  handleClose()
+                  handleClose();
                 }}
               >
                 <span></span>
@@ -125,8 +120,9 @@ function ProjectDetail ({ project }) {
         <Modal.Footer></Modal.Footer>
       </Modal>
     </div>
-  )
+  );
 }
+
 ProjectDetail.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string,
@@ -134,11 +130,10 @@ ProjectDetail.propTypes = {
     description: PropTypes.string,
     tecFocus: PropTypes.string,
     projectGroup: PropTypes.bool,
-    id: PropTypes.string,
     preview: PropTypes.bool,
     repository: PropTypes.string,
-    habilidadeFocada: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired
-}
+    habilidadeFocada: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
 
-export default ProjectDetail
+export default ProjectDetail;
