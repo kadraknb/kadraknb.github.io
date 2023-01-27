@@ -13,9 +13,7 @@ function CenterBody () {
           Ola, sou o Vagner. <br />
           Moro no Distrito Federal e estou em transição de carreira,<br/> de operado de maquina onde
           trabalhei por 5 anos, para desenvolvedor Full Stack.
-           <br /> Apaixonado por tecnologia, decidi mudar de
-          carreira em busca de satisfação profissional que somente um trabalho na
-          área que amo poderia me proporcionar.
+           <br />
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1" className="buttonSM">
