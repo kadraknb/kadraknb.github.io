@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 
 import Context from '../../context/Context';
-import projectList from '../../services/getProjectList';
+import projectList from '../../../public/projectList';
 import ProjectDetail from './projectDetail';
 
 function ListaProjetos() {
