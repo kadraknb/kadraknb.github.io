@@ -1,61 +1,48 @@
-import React, { useContext } from 'react'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
-import Tooltip from 'react-bootstrap/Tooltip'
-import Popover from 'react-bootstrap/Popover'
+import React, { useContext } from 'react';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
-import Context from '../../context/Context'
-import iconTec from '../../services/getTec'
+import Context from '../../context/Context';
+import iconTec from '../../../public/tecs';
 
-function IconsTec () {
-  const { iconTecFocada, setIconTecFocada } = useContext(Context)
+function IconsTec() {
+  const { iconTecFocada, setIconTecFocada } = useContext(Context);
 
   return (
-    <div id='iconsTec_mein'>
+    <div id="iconsTec_mein">
       <h6 className="text-b-b">Ferramentas</h6>
       <ul className="ulIconTec ">
         {Object.values(iconTec).map((tec) => {
-          const { nome, descricao, img } = tec
+          const { nome, img } = tec;
           return (
             <OverlayTrigger
               key={tec.nome}
-              placement="right"
               overlay={
-                iconTecFocada === nome
-                  ? (
-                  <Popover id={`popover-positioned-${nome}`}>
-                    <Popover.Header as="h3">{nome}</Popover.Header>
-                    <Popover.Body>
-                      <strong>{descricao}</strong>
-                    </Popover.Body>
-                  </Popover>
-                    )
-                  : (
-                  <Tooltip id={`tooltip-${nome}`}>
-                    Click para mais informação sobre minha experiência com{' '}
-                    <strong>{nome}</strong>.
-                  </Tooltip>
-                    )
+                <Tooltip>
+                  <strong>{nome}</strong>
+                </Tooltip>
               }
             >
-              <li key={nome} className="liIconTec">
+              <li
+                key={nome}
+                className="liIconTec"
+                onClick={() => setIconTecFocada(nome)}
+              >
                 <img
-                  onClick={() => {
-                    setIconTecFocada(nome)
-                  }}
                   src={img}
                   alt="technology icon"
-                  className={`imgTec ${
-                    iconTecFocada === nome && 'Perfil_imgTec_brilho'
+                  className={` tamanho_img_tec ${
+                    iconTecFocada === nome ? 'imgTec_foco' : 'imgTec'
                   } `}
                 />
-                <div id='glass_iconTec' onClick={() => setIconTecFocada(nome)} />
+                <div className="glass_iconTec tamanho_img_tec" />
               </li>
             </OverlayTrigger>
-          )
+          );
         })}
       </ul>
     </div>
-  )
+  );
 }
 
-export default IconsTec
+export default IconsTec;

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import clipboardCopy from 'clipboard-copy';
-import ListGroup from 'react-bootstrap/ListGroup';
 import Overlay from 'react-bootstrap/Overlay';
 import Tooltip from 'react-bootstrap/Tooltip';
 import iconTec from '../../images';
@@ -9,74 +8,49 @@ function Contatos() {
   const [show, setShow] = useState(false);
   const target = useRef(null);
 
-  const fechaPop = () => {
+  const executarPop = () => {
     setShow(true);
     setTimeout(() => setShow(false), 3000);
   };
-  return (
+
+  const exibirIcone = (icone) => (
     <>
-      <ListGroup className="contatos">
-        <ListGroup.Item>
-          <>
-            <img src={iconTec.gitHub} alt="technology icon" className="imgC" />
-            <div className="gless_contat" ></div>
-          </>
-          <a
-            target="_blank"
-            href="https://github.com/kadraknb"
-            className="Clink"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </ListGroup.Item>
-        <ListGroup.Item>
-          <>
-            <img
-              src={iconTec.linkedin}
-              alt="technology icon"
-              className="imgC"
-            />
-            <div className="gless_contat" />
-          </>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/vagner-cardos-santos/"
-            className="Clink"
-            rel="noreferrer"
-          >
-            Linkedin
-          </a>
-        </ListGroup.Item>
-        <ListGroup.Item className="emailCopy">
-          <div>
-            <img src={iconTec.email} alt="technology icon" className="imgC" />
-            <div className="gless_contat" />
-          </div>
-          <div id="Perf_box_email">
-            <p className="Perf_email">vagner_cardoso_s</p>
-            <p className="Perf_email">@outlook.com</p>
-            <a
-              className="Copying"
-              ref={target}
-              onClick={() => {
-                clipboardCopy('vagner_cardoso_s@outlook.com');
-                fechaPop();
-              }}
-            >
-              Copiar email
-            </a>
-            <Overlay target={target.current} show={show} placement="right">
-              {(props) => (
-                <Tooltip id="overlay-example" {...props}>
-                  Email copiado!
-                </Tooltip>
-              )}
-            </Overlay>
-          </div>
-        </ListGroup.Item>
-      </ListGroup>
+      <img src={icone} alt="technology icon" className="img_contato" />
+      <div className="gless_contat"></div>
     </>
+  );
+  return (
+    <div className='box_contatos'>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/vagner-cardos-santos/"
+        className="Clink"
+        rel="noreferrer"
+      >
+        {exibirIcone(iconTec.linkedin)}
+      </a>
+      <a
+        target="_blank"
+        href="https://github.com/kadraknb"
+        className="Clink"
+        rel="noreferrer"
+      >
+        {exibirIcone(iconTec.gitHub)}
+      </a>
+      <a
+        className="Clink"
+        ref={target}
+        onClick={() => {
+          clipboardCopy('vagner_cardoso_s@outlook.com');
+          executarPop();
+        }}
+      >
+        <Overlay target={target.current} show={show}>
+          {(props) => <Tooltip {...props}>Email copiado!</Tooltip>}
+        </Overlay>
+        {exibirIcone(iconTec.email)}
+      </a>
+    </div>
   );
 }
 
