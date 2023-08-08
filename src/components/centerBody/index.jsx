@@ -1,45 +1,53 @@
-import React from 'react'
-import Accordion from 'react-bootstrap/Accordion'
-import './centerBody.css'
+import React from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import './centerBody.css';
+import info from '../../../public/infoCenter';
 
-function CenterBody () {
+function CenterBody() {
   return (
-    <Accordion defaultActiveKey="0" className="sobreMim transition sombra efeito-vidro">
+    <Accordion
+      defaultActiveKey="0"
+      className="sobreMim transition sombra efeito-vidro"
+    >
       <Accordion.Item eventKey="0" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong className='headerFont'>Sobre mim</strong>
+          <strong className="headerFont">Sobre mim</strong>
         </Accordion.Header>
-        <Accordion.Body className='fontBody'>
-          Ola, sou o Vagner. <br />
-          Moro no Distrito Federal e estou em transição de carreira,<br/> de operado de maquina onde
-          trabalhei por 5 anos, para desenvolvedor Full Stack.
-           <br />
+        <Accordion.Body className="fontBody">
+          {info.sobre.split('\n').map((line, i) => (
+            <div key={i}>
+              {line}
+              <br />
+            </div>
+          ))}
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="1" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong className='headerFont'>Possuo conhecimento em</strong>
+          <strong className="headerFont">Conhecimentos</strong>
         </Accordion.Header>
-        <Accordion.Body className='fontBody'>
-          <strong>Desenvolvimento Front-end</strong>:
-          React: Router, Redux, Context API e Hooks; Testes com RTL e Jest, HTML e CSS. <br />
-          <br />
-          <strong>Desenvolvimento Back-end</strong>: NodeJS, módulo FS, MySQL, Sequelize, Docker ,Testes com Mocha, Chai e
-          Sinon. <br />
-          <br />
-          <strong>Soft Skills</strong>: Metodologias ágeis: Scrum, Kanban. <br />
-          <br />
-          <strong>Tecnologias</strong>: Git, Unix e Bash, TypeScript, JavaScript ES6.
+        <Accordion.Body className="fontBody">
+          {info.conhecimento.descricoes.map((descricao, i) => (
+            <div key={i}>
+              <strong>{descricao}: </strong>
+              {info.conhecimento.conteudo[i]}
+              <br />
+            </div>
+          ))}
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="2" className="buttonSM">
         <Accordion.Header className="headerSM">
-          <strong className='headerFont'>Conhecimento em desenvolvimento</strong>
+          <strong className="headerFont">
+            Desenvolvimento
+          </strong>
         </Accordion.Header>
-        <Accordion.Body className='fontBody'>Inglês, MongoDB e Python.</Accordion.Body>
+        <Accordion.Body className="fontBody">
+        {info.desenvolvimento}
+        </Accordion.Body>
       </Accordion.Item>
     </Accordion>
-  )
+  );
 }
 
-export default CenterBody
+export default CenterBody;

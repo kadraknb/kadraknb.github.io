@@ -53,9 +53,8 @@
   font-size: 1px;
 }
 
-#itemAppProfile {
+#appProfile {
   position: relative;
-  min-width: 280px;
-  height: 100vh;
+  width: 280px;
   border: 0;
 }

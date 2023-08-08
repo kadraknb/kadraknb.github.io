@@ -12,12 +12,14 @@ function Profile () {
 
   return (
     <div className="profile efeito-vidro" style={ajusteTelaWidth}>
-      <img src={photoProfile} alt="photoProfile" className="imgProfile" />
-      <div className='glassImg'></div>
       <div>
-        <h5 className="nomeP">Vagner Cardoso dos Santos</h5>
+      <img src={photoProfile} alt="photoProfile" className="imgProfile tamanho_img_perf" />
+      <div className='glassImg tamanho_img_perf'></div>
+      <div>
+        <h5 className="nome_perf">Vagner Cardoso dos Santos</h5>
       </div>
       <Contatos />
+      </div>
       <IconsTec />
     </div>
   )

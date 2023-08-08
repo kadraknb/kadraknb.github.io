@@ -1,19 +1,38 @@
 // {
-//   id: 0,
+//   id: '',
 //   name: '',
-//   icon: '',
+//   icon: imgProjetos.,
 //   tecFocus: '',
 //   listTec: [''],
 //   projectGroup: false,
+//   preview: true,
 //   linkPreview: '',
 //   repository: '',
 //   habilidadeFocada: [],
 //   description: '',
+//   descriptionShort: '',
 // },
+// Bootstrap
+// JavaScript TypeScript React Redux GitHub Bootstrap Trello HTML CSS Vue
+// Docker MySQL Sequelize Node.js Jest 
 
 import imgProjetos from './images'
 
 const projectList = [
+  {
+    id: 'DataGraphic',
+    name: 'DataGraphic',
+    icon: imgProjetos.DataGraphic,
+    tecFocus: 'Vue.js 2, biblioteca de Gráficos',
+    listTec: ['Vue', 'JavaScript', 'Bootstrap', 'HTML', 'CSS', 'Trello'],
+    projectGroup: false,
+    preview: true,
+    linkPreview: 'https://kadraknb.github.io/DataGraphic/',
+    repository: 'https://github.com/kadraknb/DataGraphic',
+    habilidadeFocada: ['Usar bibliotecas compatíveis com vue.js 2', 'Usar a biblioteca de  gráficos ApexCharts'],
+    description: 'Este projeto consiste em um aplicativo (APP) que renderiza estatísticas recebidas da API em três tipos de gráficos.',
+    descriptionShort: 'Exibe estatísticas em 3 tipos de gráficos.',
+  },
   {
     id: 'Trivia',
     name: 'Trivia',
