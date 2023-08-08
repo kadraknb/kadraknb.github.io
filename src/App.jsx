@@ -28,7 +28,7 @@ function App() {
       ) : (
         <main id="Body_All" style={ajusteTelaZoom}>
           <aside
-            id="itemAppProfile"
+            id="appProfile"
             className="efeito-vidro"
             style={ajusteTelaWidth}
           >
