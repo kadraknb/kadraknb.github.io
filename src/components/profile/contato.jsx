@@ -20,7 +20,7 @@ function Contatos() {
     </>
   );
   return (
-    <div className='box_contatos'>
+    <div id='contatos_main'>
       <a
         target="_blank"
         href="https://www.linkedin.com/in/vagner-cardos-santos/"

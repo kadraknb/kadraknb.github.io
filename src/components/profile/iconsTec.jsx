@@ -9,8 +9,8 @@ function IconsTec() {
   const { iconTecFocada, setIconTecFocada } = useContext(Context);
 
   return (
-    <div id="iconsTec_mein">
-      <h6 className="text-b-b">Ferramentas</h6>
+    <div id="iconsTec_main">
+      <text className="title flax_center">Ferramentas</text>
       <ul className="ulIconTec ">
         {Object.values(iconTec).map((tec) => {
           const { nome, img } = tec;

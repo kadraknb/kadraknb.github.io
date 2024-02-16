@@ -1,132 +1,134 @@
-/* //////////////perfil */
-.profile {
+#box_profile_main {
   display: flex;
   flex-direction: column;
   border-top: 0;
   border-left: 0;
+  /* color: var(--azul-base); */
+
+  .img_Profile {
+    border-radius: 0 50% 50% 0;
+  }
+
+  .glass_Img {
+    position: fixed;
+    top: 0;
+    border-radius: 0 50% 50% 0;
+    box-shadow: 5px -5px 20px var(--azul-base), -5px -5px 35px var(--azul-base);
+    filter: drop-shadow(1px 1px 30px #03e9f4);
+  }
+
+  .tamanho_img_perf {
+    width: 253px;
+    height: 250px;
+  }
+
+  .nome_perf {
+    border-bottom: 1px solid #00909785;
+    font-size: large;
+    margin: 20px 10px;
+    -webkit-box-reflect: var(--reflect-min);
+  }
 }
 
-.imgProfile {
-  border-radius: 0 50% 50% 0;
-}
-
-.glassImg {
-  position: fixed;
-  top: 0;
-  border-radius: 0 50% 50% 0;
-  box-shadow: 5px -5px 40px var(--azul-base), -5px -5px 40px var(--azul-base);
-  filter: drop-shadow(1px 1px 30px #03e9f4);
-}
-
-.tamanho_img_perf {
-  width: 253px;
-  height: 250px;
-}
-
-.nome_perf {
-  border-bottom: 1px solid #00909785;
-  margin: 20px 10px;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 146, 243, 0.178));
-}
-
-/* contato///////////  */
-.box_contatos {
+#contatos_main {
   display: flex;
   justify-content: space-around;
   margin: 30px 0;
 
+  .img_contato {
+    width: 80px;
+    height: 80px;
+    filter: var(--drop-shadow-9px);
+  }
+
+  .gless_contat {
+    margin-top: -80px;
+    position: fixed;
+    width: 80px;
+    height: 80px;
+  }
+
 }
 
-.img_contato {
-  width: 80px;
-  height: 80px;
-  filter: var(--drop-shadow-9px) brightness(20);
-}
-
-.gless_contat {
-  margin-top: -80px;
-  position: fixed;
-  width: 80px;
-  height: 80px;
-}
-
-/* icon tecs///////////// */
-#iconsTec_mein {
+#iconsTec_main {
   flex-grow: 1;
   width: 280px;
-}
 
-.ulIconTec {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-content: space-around;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
+  .title {
+    border-bottom: 1px solid var(--azul-base);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
 
-.liIconTec {
-  height: 100px;
-  width: fit-content;
-}
-.tamanho_img_tec {
-  width: 50px;
-  height: 50px;
-}
-.imgTec {
-  filter: var(--drop-shadow-9px) brightness(20);
-  -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.144));
-}
+  .ulIconTec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
 
-.glass_iconTec {
-  margin-top: -50px;
-  position: fixed;
+  .liIconTec {
+    height: 100px;
+    width: fit-content;
+  }
 
-}
-.imgTec_foco {
-    filter: brightness(1);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.699));
-}
+  .tamanho_img_tec {
+    width: 50px;
+    height: 50px;
+  }
 
-.liIconTec:hover {
   .imgTec {
-    filter: brightness(1);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.699));
+    -webkit-box-reflect: var(--reflect-min);
+  }
+
+  .glass_iconTec {
+    margin-top: -50px;
+    position: fixed;
+
+  }
+
+  .imgTec_foco {
+    -webkit-box-reflect: var(--reflect-max);
+  }
+
+  .liIconTec:hover {
+    .imgTec {
+      -webkit-box-reflect: var(--reflect-mediu);
+    }
   }
 }
 
 @media (max-height: 922px) {
-  .profile {
+  #box_profile_main {
     overflow-y: scroll;
     overflow-x: hidden;
+  }
+
+  #box_profile_main::-webkit-scrollbar {
+    width: 0px;
   }
 }
 
 @media (max-width: 700px) {
-  .profile {
+  #box_profile_main {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
-  }
 
-  .glassImg,
-  .imgProfile {
-    border-radius: 100%;
-  }
+    #box_img_perf {
+      display: flex;
+      justify-content: center;
+    }
 
-  .contatos .list-group-item {
-    border-left: 1px solid #00d9ff3b;
-  }
-
-  .profile::-webkit-scrollbar-track {
-    background-color: #02000075;
-  }
-
-  .profile::-webkit-scrollbar {
-    width: 8px;
-    background-color: #f5f5f500;
+    .glass_Img,
+    .img_Profile {
+      border-radius: 100%;
+    }
   }
 }
