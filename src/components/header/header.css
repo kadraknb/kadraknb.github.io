@@ -21,7 +21,7 @@
   color: var(--azul-base);
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.3s;
+  transition: var(--valor-trasicao);
   letter-spacing: 2px;
 }
 
