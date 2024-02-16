@@ -1,52 +1,63 @@
-import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
+import React, { useEffect, useState } from 'react';
 import './centerBody.css';
 import info from '../../../public/infoCenter';
+import iconDownLined from '../../../public/images/icon-down-lined.png';
 
 function CenterBody() {
+  const [show, setShow] = useState(0);
+  const [sobre, setSobre] = useState([]);
+
+  useEffect(() => {
+    formatBody();
+  }, []);
+
+  const formatBody = () => {
+    const api = Object.values(info);
+    const newBody = [
+      [
+        'Sobre Mim',
+        api[0].split('\n').map((line, i) => (
+          <text key={i}>
+            {line}
+            <br />
+          </text>
+        )),
+      ],
+      [
+        'Conhecimento',
+        api[1].descricoes.map((descricao, i) => (
+          <text key={i}>
+            <strong>{descricao}: </strong>
+            {api[1].conteudo[i]}
+            <br />
+          </text>
+        )),
+      ],
+      ['Desenvolvimento', api[2]],
+    ];
+    setSobre(newBody);
+  };
+
   return (
-    <Accordion
-      defaultActiveKey="0"
-      className="sobreMim transition sombra efeito-vidro"
-    >
-      <Accordion.Item eventKey="0" className="buttonSM">
-        <Accordion.Header className="headerSM">
-          <strong className="headerFont">Sobre mim</strong>
-        </Accordion.Header>
-        <Accordion.Body className="fontBody">
-          {info.sobre.split('\n').map((line, i) => (
-            <div key={i}>
-              {line}
-              <br />
+    <div id="sobre_mim_main">
+      <div id="box" className="sombra efeito_vidro">
+        <div>
+          {sobre.map(([header, body], i) => (
+            <div key={header}>
+              <div className="box_header">
+                <text className="header">{header}</text>
+                <div className="header_button" onClick={() => setShow(i)}>
+                  <img src={iconDownLined} alt="icon" />
+                </div>
+              </div>
+              <div hidden={show !== i} className="body">
+                {body}
+              </div>
             </div>
           ))}
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1" className="buttonSM">
-        <Accordion.Header className="headerSM">
-          <strong className="headerFont">Conhecimentos</strong>
-        </Accordion.Header>
-        <Accordion.Body className="fontBody">
-          {info.conhecimento.descricoes.map((descricao, i) => (
-            <div key={i}>
-              <strong>{descricao}: </strong>
-              {info.conhecimento.conteudo[i]}
-              <br />
-            </div>
-          ))}
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2" className="buttonSM">
-        <Accordion.Header className="headerSM">
-          <strong className="headerFont">
-            Desenvolvimento
-          </strong>
-        </Accordion.Header>
-        <Accordion.Body className="fontBody">
-        {info.desenvolvimento}
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+        </div>
+      </div>
+    </div>
   );
 }
 
