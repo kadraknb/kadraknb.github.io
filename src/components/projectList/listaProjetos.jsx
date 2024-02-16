@@ -15,35 +15,26 @@ function ListaProjetos() {
   };
 
   return (
-    <ul className="ulProj">
+    <ul id="list_proj">
       {projectList.map((project, index) => (
         <li
           key={project.id}
-          className={`liProj hover-proj ${!load && 'load'} ${
-            project.listTec.includes(iconTecFocada) && 'ListP_IconFoco'
+          className={`${ project.listTec.includes(iconTecFocada) && 'ListP_IconFoco'
           }`}
         >
-          <Card className="efeito-vidro">
-            <Card.Img className="imgLP" variant="top" src={project.icon} />
-            <div id="glass_listProj" />
-            <Card.Body>
-              <Card.Title className="ProjList_li_nome">
-                {project.name}
-              </Card.Title>
-              <Card.Text className="ProjList_li_txt">
-                {project.descriptionShort}
-              </Card.Text>
-              <button
-                className={`ProjList_li_BT ${!load && 'load'}`}
-                onClick={() => {
+          <div className='card efeito_vidro'>
+            <div className='flax_center'>
+            <img className='img' src={project.icon} alt="ícone do projeto" />
+            </div>
+            <div className='box_texto'>
+              <div className='nome'>{project.name}</div>
+              <div className='descricao'>{project.descriptionShort}</div>
+            </div>
+            <button className='button_card' onClick={() => {
                   setSelectedProject(index);
                   !showDetalhe && setShowDetalhe(!showDetalhe);
-                }}
-              >
-                Mais detalhe
-              </button>
-            </Card.Body>
-          </Card>
+                }}>Mais detalhe</button>
+          </div>
           {selectedProject === index && (
             <ProjectDetail
               setSelectedProject={setSelectedProject}
