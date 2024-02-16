@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './app.css';
 
@@ -29,7 +29,7 @@ function App() {
         <main id="Body_All" style={ajusteTelaZoom}>
           <aside
             id="appProfile"
-            className="efeito-vidro"
+            className="efeito_vidro"
             style={ajusteTelaWidth}
           >
             <Profile />
