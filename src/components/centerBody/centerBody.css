@@ -1,53 +1,53 @@
-.sobreMim {
-  position: relative;
-  top: 100px;
-  z-index: 2;
-  margin: 10px;
+#sobre_mim_main {
+  margin-top: 15vh;
+  width: 50vw;
+
+  #box {
+    border: solid 3px var(--azul-mar);
+    border-radius: 10px;
+    color: var(--azul-base);
+
+
+    .box_header {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      outline: 3px solid var(--azul-mar);
+      border-radius: 8px;
+      padding: 0 8px;
+      margin: 2px 0px;
+
+      .header {
+        font-size: x-large;
+        font-weight: 900;
+        padding: 10px 7px;
+      }
+      .header_button{
+        width: 30px;
+        height: 30px;
+        margin: 8px;
+      }
+    }
+    .body {
+      padding: 10px 20px;
+      margin: 0;
+      text{
+        font-weight: 500;
+      }
+
+      animation: animateShowBody 0.2s linear both;
+    }
+  }
 }
 
-.centerBody {
-  min-width: 30%;
-  width: 60%;
-}
-
-.headerSM {
-  --bs-accordion-btn-icon: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%230c63e4%27%3e%3cpath fill-rule=%27evenodd%27 d=%27M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e');
-}
-
-.headerFont {
-  font-size: x-large;
-}
-
-.fontBody {
-  font-size: larger;
-}
-
-.accordion-button::after {
-  filter: var(--drop-shadow-9px) brightness(10);
-}
-
-.buttonSM {
-  transition: 0.3s;
-  --bs-accordion-border-color: #03e9f4;
-  --bs-accordion-bg: none;
-  --bs-accordion-btn-bg: var(--bs-accordion-bg);
-  --bs-accordion-active-color: #03e9f4;
-  --bs-accordion-btn-color: #03e9f4;
-  --bs-accordion-active-bg: none;
-  color: #03e9f4;
-}
-
-.buttonSM:hover {
-  --bs-accordion-bg: #03e9f4;
-  --bs-accordion-active-bg: #03e9f4;
-  --bs-accordion-active-color: #050801;
-  --bs-accordion-btn-color: #050801;
-  color: #050801;
-  box-shadow: var(--box-shadow-max);
+@keyframes animateShowBody {
+  0% {
+    font-size: 5%;
+  }
 }
 
 @media (max-width: 370px) {
-  .sobreMim {
+  #sobre_mim_main {
     zoom: 80%;
   }
 }
