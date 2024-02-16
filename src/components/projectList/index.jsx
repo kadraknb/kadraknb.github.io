@@ -8,8 +8,8 @@ function ProjectList () {
   const { ajusteTelaWidth } = useContext(Context);
 
   return (
-    <div className="listProject " style={ajusteTelaWidth}>
-      <h2 className="h2Title projListTitle">projetos</h2>
+    <div id="list_proj_main " style={ajusteTelaWidth}>
+      {/* <h2 className="h2Title projListTitle">projetos</h2> */}
       <ListaProjetos />
     </div>
   )
