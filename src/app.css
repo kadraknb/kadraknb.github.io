@@ -1,10 +1,13 @@
-:root {
-  --azul-base: #03e9f4;
-  --box-shadow-max: 0 0 5px var(--azul-base), 0 0 25px var(--azul-base), 0 0 50px var(--azul-base), 0 0 200px var(--azul-base);
-  --drop-shadow-9px: drop-shadow(1px 1px 9px #03e9f4)
+/* * {
+  outline: 1px solid red;
+ } */
+
+.flax_center{
+  display: flex;
+  justify-content: center;
 }
 
-.efeito-vidro {
+.efeito_vidro {
   background: #00000056;
   backdrop-filter: blur(5.2px);
   -webkit-backdrop-filter: blur(5.2px);
@@ -15,25 +18,11 @@
 .sombra {
   box-shadow: 0 4px 40px var(--azul-base);
 }
-.text-b-b {
-  width: 280px;
-  padding: 0 77px;
-  margin: 3px auto;
-  align-items: center;
-  color: var(--azul-base);
-  border-bottom: 1px solid var(--azul-base);
-  text-transform: uppercase;
-}
 
 #Body_All {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  color: rgb(255, 255, 255);
-}
-
-.transition {
-  transition: 1.5s;
 }
 
 .ocultarSobreMim {
