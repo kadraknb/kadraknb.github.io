@@ -9,7 +9,7 @@ function IconsTec() {
   const { iconTecFocada, setIconTecFocada } = useContext(Context);
 
   return (
-    <div id="iconsTec_main">
+    <div id="box_ferramentas">
       <text className="title flax_center">Ferramentas</text>
       <ul className="ulIconTec ">
         {Object.values(iconTec).map((tec) => {
@@ -29,13 +29,13 @@ function IconsTec() {
                 onClick={() => setIconTecFocada(nome)}
               >
                 <img
+                  draggable="false"
                   src={img}
                   alt="technology icon"
                   className={` tamanho_img_tec ${
                     iconTecFocada === nome ? 'imgTec_foco' : 'imgTec'
                   } `}
                 />
-                <div className="glass_iconTec tamanho_img_tec" />
               </li>
             </OverlayTrigger>
           );
