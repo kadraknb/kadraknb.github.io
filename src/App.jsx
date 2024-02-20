@@ -28,8 +28,6 @@ function App() {
       ) : (
         <main id="Body_All" style={ajusteTelaZoom}>
           <aside
-            id="appProfile"
-            className="efeito_vidro"
             style={ajusteTelaWidth}
           >
             <Profile />
