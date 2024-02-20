@@ -13,30 +13,23 @@ function Contatos() {
     setTimeout(() => setShow(false), 3000);
   };
 
-  const exibirIcone = (icone) => (
-    <>
-      <img src={icone} alt="technology icon" className="img_contato" />
-      <div className="gless_contat"></div>
-    </>
+  const elementLink = (href, icon) => (
+    <a target="_blank" href={href} className="Clink" rel="noreferrer">
+      <img
+        draggable="false"
+        src={icon}
+        alt="technology icon"
+        className="img_contato"
+      />
+    </a>
   );
   return (
-    <div id='contatos_main'>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/vagner-cardos-santos/"
-        className="Clink"
-        rel="noreferrer"
-      >
-        {exibirIcone(iconTec.linkedin)}
-      </a>
-      <a
-        target="_blank"
-        href="https://github.com/kadraknb"
-        className="Clink"
-        rel="noreferrer"
-      >
-        {exibirIcone(iconTec.gitHub)}
-      </a>
+    <div id="contatos">
+      {elementLink(
+        'https://www.linkedin.com/in/vagner-cardos-santos/',
+        iconTec.linkedin
+      )}
+      {elementLink('https://github.com/kadraknb', iconTec.gitHub)}
       <a
         className="Clink"
         ref={target}
@@ -48,7 +41,12 @@ function Contatos() {
         <Overlay target={target.current} show={show}>
           {(props) => <Tooltip {...props}>Email copiado!</Tooltip>}
         </Overlay>
-        {exibirIcone(iconTec.email)}
+        <img
+          draggable="false"
+          src={iconTec.email}
+          alt="technology icon"
+          className="img_contato"
+        />
       </a>
     </div>
   );
