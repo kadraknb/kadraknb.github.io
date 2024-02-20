@@ -1,38 +1,49 @@
 #sobre_mim_main {
   margin-top: 15vh;
-  width: 50vw;
+  width: 60vw;
 
   #box {
-    border: solid 3px var(--azul-mar);
+    border: solid 1px var(--azul-mar);
     border-radius: 10px;
     color: var(--azul-base);
 
+    :nth-child(1) .box_header {
+      border-radius: 8px 8px 0 0;
+    }
+
+    :nth-child(3) .box_header {
+      border-radius: 0 0 8px 8px;
+    }
 
     .box_header {
       display: flex;
       justify-content: space-between;
       height: 50px;
-      outline: 3px solid var(--azul-mar);
-      border-radius: 8px;
+      border: 1px solid var(--azul-mar);
       padding: 0 8px;
-      margin: 2px 0px;
+      margin: -1px -1px;
 
       .header {
         font-size: x-large;
         font-weight: 900;
         padding: 10px 7px;
       }
-      .header_button{
+
+      .header_button {
         width: 30px;
         height: 30px;
         margin: 8px;
       }
     }
+
     .body {
       padding: 10px 20px;
       margin: 0;
-      text{
+
+      text {
+        font-size: 22px;
         font-weight: 500;
+        word-spacing: 2px;
       }
 
       animation: animateShowBody 0.2s linear both;
