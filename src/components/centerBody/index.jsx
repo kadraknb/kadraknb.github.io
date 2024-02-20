@@ -41,7 +41,6 @@ function CenterBody() {
   return (
     <div id="sobre_mim_main">
       <div id="box" className="sombra efeito_vidro">
-        <div>
           {sobre.map(([header, body], i) => (
             <div key={header}>
               <div className="box_header">
@@ -55,7 +54,6 @@ function CenterBody() {
               </div>
             </div>
           ))}
-        </div>
       </div>
     </div>
   );
