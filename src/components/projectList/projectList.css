@@ -14,16 +14,14 @@
   padding-right: 20px;
 
   .card {
+
     width: 260px;
     height: 300px;
-    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     animation: animateProjLI 0.5s linear both;
     transition: var(--valor-trasicao);
-    border-radius: 50px;
-    box-shadow: var(--box-shadow-min);
 
     .img {
       filter: var(--drop-shadow-9px);
