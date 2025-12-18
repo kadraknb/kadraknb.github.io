@@ -1,8 +1,5 @@
 const info = {
-  sobre: `Ola, sou o Vagner.
-  Moro no Distrito Federal e estou em transição de carreira,
-  de operador de máquina onde trabalhei por 5 anos, para desenvolvedor Full Stack.
-  Apaixonado por tecnologia, decidi mudar de carreira em busca de satisfação profissional que somente um trabalho na área que amo poderia me proporcionar.`,
+  sobre: `Ola, sou o Vagner.`,
   conhecimento: {
     descricoes: ['Linguagens', 'Front-end', 'Back-end', 'Teste', 'Soft Skills'],
     conteudo: [
@@ -13,7 +10,7 @@ const info = {
       'Scrum, Kanban.',
     ],
   },
-  desenvolvimento: 'Inglês, java.',
+  desenvolvimento: 'java.',
 };
 
 export default info;
